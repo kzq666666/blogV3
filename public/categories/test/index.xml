@@ -1,30 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on KiWaTo</title>
-    <link>https://kangzhiqing.com/post/</link>
-    <description>Recent content in Posts on KiWaTo</description>
+    <title>Test on KiWaTo</title>
+    <link>https://kangzhiqing.com/categories/test/</link>
+    <description>Recent content in Test on KiWaTo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Nov 2020 17:07:37 +0800</lastBuildDate><atom:link href="https://kangzhiqing.com/post/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Test</title>
-      <link>https://kangzhiqing.com/post/test/</link>
-      <pubDate>Mon, 09 Nov 2020 17:07:37 +0800</pubDate>
-      
-      <guid>https://kangzhiqing.com/post/test/</guid>
-      <description>test</description>
-    </item>
-    
-    <item>
-      <title>NewBlog</title>
-      <link>https://kangzhiqing.com/post/newblog/</link>
-      <pubDate>Mon, 09 Nov 2020 16:57:45 +0800</pubDate>
-      
-      <guid>https://kangzhiqing.com/post/newblog/</guid>
-      <description>新博客系统上线</description>
-    </item>
-    
+    <lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kangzhiqing.com/categories/test/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Chinese Test</title>
       <link>https://kangzhiqing.com/post/test-chinese/</link>
@@ -55,15 +37,6 @@
 这么沉痛的呵护 我怎么能翱翔
 最暖的憂傷 - 田馥甄
  图片 ![Photo by Florian Klauer on Unsplash](florian-klauer-nptLmg6jqDo-unsplash.jpg) ![Photo by Luca Bravo on Unsplash](luca-bravo-alS7ewQ41M8-unsplash.</description>
-    </item>
-    
-    <item>
-      <title>CSSDemo</title>
-      <link>https://kangzhiqing.com/post/cssdemo/</link>
-      <pubDate>Thu, 23 May 2019 16:11:03 +0800</pubDate>
-      
-      <guid>https://kangzhiqing.com/post/cssdemo/</guid>
-      <description>水波效果 .waterWaves { position: relative; width: 200px; height: 200px; border: 1px solid #999; border-radius: 50%; text-align: center; line-height: 100px; margin: 100px auto; animation: wave linear infinite; overflow: hidden; } .wave1 { position: absolute; width: 200%; height: 200%; background: skyblue; opacity: 0.4; left: -50%; top: 50%; border-radius: 180px; animation: inherit; animation-duration: 7s; } .wave2 { position: absolute; width: 200%; height: 200%; background: skyblue; opacity: 0.6; left: -30%; top: 60%; border-radius: 45%; animation: inherit; animation-duration: 10s; } .</description>
     </item>
     
   </channel>
