@@ -1,8 +1,11 @@
 +++
 title = "About"
-description = "整个家伙很懒，什么也没写"
-date = "2020-11-13"
+description = "Hugo, the world's fastest framework for building websites"
+date = "2019-02-28"
 aliases = ["about-us", "about-hugo", "contact"]
 author = "Hugo Authors"
+license = "CC BY-NC-ND"
+lastmod = "2020-10-09"
 +++
 
+这个家伙很懒，什么都没写
