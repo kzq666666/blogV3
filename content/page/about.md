@@ -1,7 +1,7 @@
 +++
 title = "About"
-description = "Hugo, the world's fastest framework for building websites"
-date = "2019-02-28"
+description = "关于"
+date = "2020-11-13"
 aliases = ["about-us", "about-hugo", "contact"]
 author = "Hugo Authors"
 license = "CC BY-NC-ND"
