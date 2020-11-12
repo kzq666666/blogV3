@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Regular Expression
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel="icon" href="/img/avator.jpg" sizes="16x16"><meta name='description' content='Regular Expression
 正则表达式：匹配特殊字符或有特殊搭配原则的字符的最佳选择 创建方式  直接量 new RegExp();  // 直接量 var reg = /abc/ ; // new RegExp(); var reg = new RegExp(pattern. attribute); var reg = new RegExp(&amp;#34;abc&amp;#34;,&amp;#34;i&amp;#34;) var reg = new RegExp(/abc/i); 修饰符 /i ignoreCase 忽视大小写 /g global 全局匹配 /m multiline 多行匹配
 常用方法 str.match(reg) // 返回匹配成功的结果数组 str.search(reg) // 返回匹配到的位置，匹配不到返回-1 str.split(reg) str.replace(reg, newStr/function(){}) reg.test(str) // 匹配返回true，不匹配则返回false reg.exec() // 常用规则 \w ==&amp;gt; [0-9A-z_] \W ==&amp;gt; [^\w] \d ==&amp;gt; [0-9] \D ==&amp;gt; [^\d] \s ==&amp;gt; [\n\f\r\t\v] 空白字符 \S ==&amp;gt; [^\s] \b ==&amp;gt; 单词边界 /\bc/ 以c开头的单词 \B ==&amp;gt; 非单词边界 .'><title>RegExp</title>
 
