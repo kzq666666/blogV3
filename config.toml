@@ -1,13 +1,14 @@
-baseurl = "https://example.com"
+baseurl = "https://kangzhiqing.com"
 languageCode = "en-us"
 theme = "hugo-theme-stack"
 paginate = 5
 title = "KiWaTo"
 disqusShortname = "hugo-theme-stack"            # Change it to your Disqus shortname before using
-DefaultContentLanguage = "en"                   # Theme i18n support
+# 默认内容语言 参考i18n文件下的配置文件
+DefaultContentLanguage = "zh-CN"                   # Theme i18n support
 
 [permalinks]
-    post = "/p/:slug/"
+    post = "/post/:slug/"
     page = "/:slug/"
     
 [params]
@@ -16,18 +17,18 @@ DefaultContentLanguage = "en"                   # Theme i18n support
     rssFullContent = true
     
     [params.dateFormat]
-        published = "Jan 02, 2006"
+        published = "2006年1月2日"
         lastUpdated = "Jan 02, 2006 15:04 MST"
         
     [params.sidebar]
         emoji = "🍥"
-        avatar = "img/avatar.png"
-        subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        avatar = "img/avator.jpg"
+        subtitle = "生有热烈，藏于俗常"
         
     [params.article]
-        math = false
+        math = true
         [params.article.license]
-            enabled = true 
+            enabled = false 
             default = "Licensed under CC BY-NC-SA 4.0"
             
     [params.comments]

@@ -2,34 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>KiWaTo</title>
-        <link>https://example.com/</link>
+        <link>https://kangzhiqing.com/</link>
         <description>Recent content on KiWaTo</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 09 Nov 2020 17:07:37 +0800</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 09 Nov 2020 17:07:37 +0800</lastBuildDate><atom:link href="https://kangzhiqing.com/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Test</title>
-        <link>https://example.com/p/test/</link>
+        <link>https://kangzhiqing.com/post/test/</link>
         <pubDate>Mon, 09 Nov 2020 17:07:37 +0800</pubDate>
         
-        <guid>https://example.com/p/test/</guid>
+        <guid>https://kangzhiqing.com/post/test/</guid>
         <description>&lt;p&gt;test&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>NewBlog</title>
-        <link>https://example.com/p/newblog/</link>
+        <link>https://kangzhiqing.com/post/newblog/</link>
         <pubDate>Mon, 09 Nov 2020 16:57:45 +0800</pubDate>
         
-        <guid>https://example.com/p/newblog/</guid>
+        <guid>https://kangzhiqing.com/post/newblog/</guid>
         <description>&lt;p&gt;新博客系统上线&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>CSSDemo</title>
-        <link>https://example.com/p/cssdemo/</link>
+        <link>https://kangzhiqing.com/post/cssdemo/</link>
         <pubDate>Thu, 23 May 2019 16:11:03 +0800</pubDate>
         
-        <guid>https://example.com/p/cssdemo/</guid>
+        <guid>https://kangzhiqing.com/post/cssdemo/</guid>
         <description>&lt;h3 id=&#34;水波效果&#34;&gt;水波效果&lt;/h3&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
