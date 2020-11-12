@@ -33,7 +33,8 @@ DefaultContentLanguage = "zh-CN"                   # Theme i18n support
             
     [params.comments]
         enabled = true
-        provider = "disqus"         # Available: disqus, utterances    
+        provider = "disqus"         # Available: disqus, utterances 
+       
         [params.comments.utterances]
             repo = ""
             issueTerm = "pathname"
