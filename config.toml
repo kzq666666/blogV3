@@ -6,7 +6,6 @@ title = "KiWaTo"
 disqusShortname = "hugo-theme-stack"            # Change it to your Disqus shortname before using
 # 默认内容语言 参考i18n文件下的配置文件
 DefaultContentLanguage = "zh-CN"                   # Theme i18n support
-
 [permalinks]
     post = "/post/:slug/"
     page = "/:slug/"
@@ -32,15 +31,15 @@ DefaultContentLanguage = "zh-CN"                   # Theme i18n support
             default = "Licensed under CC BY-NC-SA 4.0"
             
     [params.comments]
-        enabled = true
+        enabled = false
         provider = "disqus"         # Available: disqus, utterances 
-       
+        disqusShortname = "KiWaTo"   
         [params.comments.utterances]
             repo = ""
             issueTerm = "pathname"
             label = ""             # Optional
             theme = "preferred-color-scheme"
-            
+    # 右侧归档小部件
     [params.widgets]
         enabled = ['search', 'archives', 'tag-cloud']
         [params.widgets.archives]
@@ -57,9 +56,9 @@ DefaultContentLanguage = "zh-CN"                   # Theme i18n support
             
     [params.defaultImage]
         [params.defaultImage.opengraph]
-            enabled = false
-            local = false
-            src = ""
+            enabled = true
+            local = true
+            src = "/img/avator.jpg"
             
 [menu]
     [[menu.main]]
@@ -103,3 +102,6 @@ DefaultContentLanguage = "zh-CN"                   # Theme i18n support
 [markup]
     [markup.highlight]
         noClasses = false
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true

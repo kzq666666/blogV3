@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>前端 on KiWaTo</title>
+    <link>https://kangzhiqing.com/categories/%E5%89%8D%E7%AB%AF/</link>
+    <description>Recent content in 前端 on KiWaTo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 16 Apr 2020 23:43:52 +0800</lastBuildDate><atom:link href="https://kangzhiqing.com/categories/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Three.js</title>
+      <link>https://kangzhiqing.com/post/three.js/</link>
+      <pubDate>Thu, 16 Apr 2020 23:43:52 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/three.js/</guid>
+      <description>1.scene 场景 scene就是一个可以放置物体、灯光的3D空间，和现实中的一个空间相似，可大可小
+//创建一个场景 var scene = new THREE.Scene(); 2.camera 相机 camera决定看一个物体的方式和位置，和现实中的相机行为相似，有很多种类的相机。
+ PerspectiveCamera 透视相机  // 透视相机更加接近于现实中我们看物体的视角，远小近大 // 创建一个透视相机 var camera = new THREE.PerspectiveCamera(fov可视角度,aspect纵横比,near近端距离,far远端距离) // 设置camera的位置 camera.set(x,y,z) --3.渲染器  WebGLRenderer  var renderer = new THREE.WebGLRenderer() 4.几何形状  立方体(CubeGeometry)  CubeGeometry(width, height, depth, widthSegments, heightSegments, depthSegments) // width,height,depth是分别在x,y,z方向上的长度,后面三个参数是对应的分段数,如果不需要分段可以不设置。几何中心在原点  平面(PlaneGeometry)  长方形平面,并非是无限延伸的平面
+PlaneGeometry(width, height, widthSegments, heightSegments) // width,height分别是x,y方向上的长度,后面两个参数是对应的分段数  球体(SphereGeometry)  SphereGeometry(radius, segmentsWidth, segmentHeight, phiStart, phiLength, thetaStart, thetaLength) // radius:半径,segmentWidth:纬度上切片数,segmentHeight:经度上的切片数,phiStart:经度开始的弧度,phiLength:经度跨过的弧度,thetaStart:纬度开始的弧度,thetaLength:纬度跨过的弧度  文字形状  使用额外的文字形状需要下载和引用额外的字体库,下载对应的json文件放在目录下,用下面的方法引用 传送门:https://github.</description>
+    </item>
+    
+    <item>
+      <title>JsAlg</title>
+      <link>https://kangzhiqing.com/post/jsalg/</link>
+      <pubDate>Sat, 27 Apr 2019 09:25:17 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/jsalg/</guid>
+      <description>数组去重 function noRepeat(arr){ return arr.filter((ele,index)=&amp;gt;{ return arr.indexOf(ele) == index; }) } </description>
+    </item>
+    
+    <item>
+      <title>SVG</title>
+      <link>https://kangzhiqing.com/post/svg/</link>
+      <pubDate>Thu, 11 Apr 2019 15:38:47 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/svg/</guid>
+      <description>SVG(Scalable Vector Graphics 可伸缩矢量图) 历史 2001年推出第一版，一直在发展，但直到高分辨率设备出现才得到广泛的关注和使用
+定义 SVG是XML中用于描述二维图形的语言，SVG支持三种图形对象矢量图形形状、图像、文本
+代码实例 五角星 Star 1Created with Sketch.&amp;lt;!-- 0 0 198 198 min-x min-y 宽度 高度 --&amp;gt; &amp;lt;svg width=&amp;#34;198px&amp;#34; height=&amp;#34;188px&amp;#34; viewBox=&amp;#34;0 0 198 188&amp;#34; version=&amp;#34;1.1&amp;#34; xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34; xmlns:xlink=&amp;#34;http://www.w3.org/1999/xlink&amp;#34; xmlns:sketch=&amp;#34;http://www.bohemiancoding.com/sketch/ns&amp;#34;&amp;gt; &amp;lt;!--title和desc是在图片没有加载出来时候的展现出来的信息 --&amp;gt; &amp;lt;title&amp;gt;Star 1&amp;lt;/title&amp;gt; &amp;lt;desc&amp;gt;Created with Sketch.&amp;lt;/desc&amp;gt; &amp;lt;!--defs用于存储所有可以复用的元素定义的地方，如梯度、符号、路径--&amp;gt; &amp;lt;defs&amp;gt;&amp;lt;/defs&amp;gt; &amp;lt;!--g标签是group的缩写，可以把其他元素捆绑在一起使用--&amp;gt; &amp;lt;g id=&amp;#34;Page-1&amp;#34; stroke=&amp;#34;none&amp;#34; stroke-width=&amp;#34;1&amp;#34; fill=&amp;#34;none&amp;#34; fill-rule=&amp;#34;evenodd&amp;#34; sketch:type=&amp;#34;MSPage&amp;#34;&amp;gt; &amp;lt;!--多边形节点（polygon），内置还有path、rect、circle、ellipse、--&amp;gt; &amp;lt;polygon id=&amp;#34;Star-1&amp;#34; stroke=&amp;#34;#979797&amp;#34; stroke-width=&amp;#34;3&amp;#34; fill=&amp;#34;#F8E81C&amp;#34; sketch:type=&amp;#34;MSShapeGroup&amp;#34; points=&amp;#34;99 154 40.2214748 184.901699 51.4471742 119.45085 3.</description>
+    </item>
+    
+    <item>
+      <title>ResWebDesign</title>
+      <link>https://kangzhiqing.com/post/reswebdesign/</link>
+      <pubDate>Tue, 02 Apr 2019 16:26:09 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/reswebdesign/</guid>
+      <description>媒体查询 meta标签 针对视口的标签，告诉浏览器该如何渲染当前页面，是网页和移动浏览器的接口
+&amp;lt;!-- viewport:视口 width为设备宽度 初始化页面大小为实际大小的1.0倍 禁止用户缩放 --&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width,initial-scale=1.0,user-scalable=no&amp;#34;/&amp;gt; 弹性布局与响应式图片 Flexbox  方向  flex-direction  row:水平方向（起点是最左端） row-reverse:水平反方向（起点是最右端） column:垂直方向（起点是最上方） column-reverse:垂直反方向（起点是最下方）     主轴和交叉轴  FlexBox方向是row，主轴就是横轴，交叉轴就是与之垂直的纵轴 FlexBox方向是column，主轴就是纵轴，交叉轴就是横轴   对齐  align-item:交叉轴对齐方式  flex-start:从flexbox父元素起始边对齐 flex-end:从flexbox父元素末尾对齐 center:从flexbox父元素居中对齐 baseline:沿基线对齐 stretch:所有项拉伸至父元素一样大（默认）   slign-self:单个元素的对齐方式 justify-content:主轴对齐方式  flex-start(默认) flex-end center space-between:每个子元素的之间空白间距一样 space-around:每个子元素的两端空白间距都一样     flex(flex-grow flex-shrink flex-basis)  flex-grow:相对于其他的项目的放大/伸张比例 flex-shrink:相对于其他的项目的缩小/收缩比例 flex-basis:项目占据的主轴空间，默认是auto   弹性  </description>
+    </item>
+    
+    <item>
+      <title>ES6</title>
+      <link>https://kangzhiqing.com/post/es6/</link>
+      <pubDate>Fri, 04 Jan 2019 11:03:38 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/es6/</guid>
+      <description>let 和 const ES6 新加了两种声明变量的方式，一个是 let，一个是 const。
+ let 和 const 声明变量有自己的块级作用域（在 for 循环中用 let 声明的变量不会泄露到外部） let 和 const 声明变量在预编译的过程都不会进行变量提升 let 和 const 声明的变量不能再次声明，而 const 声明变量的时候必须同时赋值，并且不能再次赋值  { console.log(a); // ReferenceError:a is not undefined  let a; } { let a = 1; let a = 2; // SyntaxError: Identifier &amp;#39;a&amp;#39; has already been declared } { const a; // SyntaxError:Missing initializer in const declaration } { const a = 1; a = 2 // TypeError:Assignment to constant variable } 模板字面量  创建字符串不必再拼接了~  let a = { str: &amp;#34;模板字面量&amp;#34; }; console.</description>
+    </item>
+    
+    <item>
+      <title>Element Ui</title>
+      <link>https://kangzhiqing.com/post/element-ui/</link>
+      <pubDate>Tue, 04 Dec 2018 21:47:47 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/element-ui/</guid>
+      <description>之所以用别人造好的轮子，就是觉得自己的设计水平很差，脑子也没有很多的样式储备，写出来的样式有点丑，于是乎就想用一用类似BootStrap、uiket等轮子库，借鉴一下。这里就先学习了一下element-ui，，看！别人的轮子又大圆~
+基本介绍 Element，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库 现在是vue3.0，估计一段时间之后就会变成3.0了，相应的改动也会更新
+Vue-cli@3.0使用element-ui 作为一个插件添加到vue-cli中
+vue create el cd el vue add element 安装element插件过程中会有交互，是全部导入，还是按需求导入，我是选择按需求导入，这样比较方便，也比较轻。 成功之后就可以看到你的vue-cli初始页面就会有一个element-button
+element.js import Vue from &amp;#39;vue&amp;#39; import { Button } from &amp;#39;element-ui&amp;#39; import &amp;#39;element-ui/lib/theme-chalk/index.css&amp;#39; Vue.use(Button) tip：一定要导入对应你需要的css样式，这样才有用,index.css是theme-chalk下所有的css入口文件，如果只想单独使用某个css，找到那个css导入就好了选择你需要的轮子 官网有很详细的介绍和样式预览，选择需要的，然后使用就好了，对于很好的样式可以看一看具体css怎么实现的，增加一些自己写css的能力
+FAQ  vue使用element-ui的el-input监听不了回车事件解决 在后面加个native @keydown.enter.native  </description>
+    </item>
+    
+    <item>
+      <title>Vue</title>
+      <link>https://kangzhiqing.com/post/vue/</link>
+      <pubDate>Tue, 04 Dec 2018 18:21:14 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/vue/</guid>
+      <description>坑 在使用axios拦截器的时候，在vue-router的钩子函数created是不会触发的
+scroll 在写websocket网页版聊天时，有个需求时每次发消息，scroll都要定位在最下面，刚开始我是监听一个data里message数据的变化，每次有消息的时候，元素的scrollTop=元素的scrollHeight，但每次都是滚动条都定位在最底下的上一条消息上，因为每有一个消息，我就push到message的数组里面，然后页面自动渲染，也就是在最后一条消息渲染完成前就完成了滚动条的移动，所以导致每次都差一条消息的位置。解决办法就是监听dom的变化， 使用this.$nextTick()，dom变化后再进行滚动条的移动
+只能点击一次事件 v-click.once=&amp;ldquo;clickOnce&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>Tween.js</title>
+      <link>https://kangzhiqing.com/post/tween.js/</link>
+      <pubDate>Sun, 18 Nov 2018 11:22:48 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/tween.js/</guid>
+      <description>tween.js - http://github.com/sole/tween.js JavaScript tweening engine for easy animations, incorporating optimised Robert Penner&amp;rsquo;s equations. JavaScript补间引擎，可轻松制作动画，并采用优化的Robert Penner方程。
+1.基本用法(Usage) // 开始位置 var InitPosition = {x:100,y:0}; // 目标位置 var targetPosition = {x:200,y:0}; // 创建一个开始位置的tween var tween = new TWEEN.Tween(Initposition); // 告诉tween需要变换到的位置和时间 tween.to({targetPositon},time); // 开始这个动画 tween.start(); // 为了使动画尽可能平滑,可以在每次循环的时候更新tween animate(); function animate() { requestAnimationFrame(animate); //...  TWEEN.update(); //... } // 整个变换过程中是不能看到位置的变换的,如果需要可以执行以下代码 tween.onUpdate(function() { console.log(this) }) </description>
+    </item>
+    
+    <item>
+      <title>Typeof</title>
+      <link>https://kangzhiqing.com/post/typeof/</link>
+      <pubDate>Thu, 01 Nov 2018 17:52:19 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/typeof/</guid>
+      <description>typeof返回一个字符串,表示为经计算的操作数的类型 typeof(操作数)/typeof 操作数 ()是可以省略的 返回有五种基本类型:string,number,boolean,undefined,function,object 还有ES6的Symbol
+// 1.string: typeof(&amp;#39;你好&amp;#39;) typeof(&amp;#39;123&amp;#39;) typeof(&amp;#39;&amp;#39;) // 空字符串也是String类型 typeof(typeof(&amp;#39;a&amp;#39;)) // 2.number: typeof(123); typeof(NaN); // 3.boolean: typeof(true); typeof(false); typeof(NaN===NaN) // 强制类型转换  // 4.undefined: typeof(a) // 未经使用的变量的数据类型  // 5.object: typeof(null) // js底层所有值的前三位表示数据类型,object是000,而null的32位全是0,因此也是object typeof([]) typeof({}) // 6.function: typeof(function(){}) typeof(new Function()) typeof(class A{}) typeof(Symbol) // 7.symbol: typeof(Symbol()) 暂时性死区 在ES6中let和const出现之前,typeof都是一个完全安全的操作,即不会报错,但有了ES6中let和const的出现所带来的暂时性死区特性,使得typeof也有可能报错
+如果在一个块级作用域下存在let或const命令,则它所声明的变量就绑定在这个区域,不再受外部的影响.在声明之前使用这些变量就会报错.使用let命令声明变量之前是不可用的,这在语法上称为暂时性死区
+typeof(a); //ReferenceError let a; </description>
+    </item>
+    
+  </channel>
+</rss>

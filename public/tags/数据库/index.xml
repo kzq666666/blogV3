@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据库 on KiWaTo</title>
+    <link>https://kangzhiqing.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+    <description>Recent content in 数据库 on KiWaTo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 11 Dec 2018 16:06:49 +0800</lastBuildDate><atom:link href="https://kangzhiqing.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mongodb</title>
+      <link>https://kangzhiqing.com/post/mongodb/</link>
+      <pubDate>Tue, 11 Dec 2018 16:06:49 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/mongodb/</guid>
+      <description>在学习node的时候，进行连接数据库相关操作，于是就学习了一下mongodb非关系型数据库。 mongodb操作的都是对象
+基本命令汇总 show dbs 显示所有的数据库 show tables 显示当前数据库下的所有表 db 显示当前数据库 use mydb 切换到mydb数据库，如果没有则创建mydb数据库 db.stu.insert({}) 向stu表中插入数据，如果没有stu则创建一个stu表 db.stu.find() 显示stu表下的所有数据 db.stu.find({条件1},{条件2}) 查找满足条件1且条件2的数据 db.stu.find({$or:[{条件1},{条件2}]}) 查找满足条件1或条件2的数据 db.stu.find({age:{$gte:10,$lte:20}}) 查询stu表中age大于等于10并且小于等于20的数据 </description>
+    </item>
+    
+    <item>
+      <title>MySQL</title>
+      <link>https://kangzhiqing.com/post/mysql/</link>
+      <pubDate>Tue, 30 Oct 2018 17:06:30 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/mysql/</guid>
+      <description>mysql数据库是我今年暑假在家学习的，当时学习的时候写了一些笔记，现在把笔记整理到博客上。
+Tips  sql语句的语法Windows下是不区分大小写的，但在Linux是严格区分的，最好还是用大写吧 单双引号表示字符没有区别 注释单行一般用 --，多行（块）用 /* */ 命名规范遵循基本的命名原则，具体因人而异，个人喜欢小驼峰  SQL语句分类  数据库查询语言DQL（datebase query language） SELECT 数据库定义语言DDL（datebase defined language）
+CREATE DATABASE、CREATE TABLE、DROP DATABASE、DROP TABLE 数据库操作语言DML（database manage language）
+UPDATE、INSERT、DELETE  数据类型属性 mysql常见的数据类型：varchar(n)、float、int(n)、bigint(n)、date、datetime、text
+ 默认值 default &#39;默认值&#39; 非空：NOT NULL  如果某一个字段别NOT NULL修饰后，添加数据时，此字段必需填写 自动增长：auto_increment，尽量作用在int类型的字段上 主键(唯一的，不能重复，一张表中只能以一个作为主键)：primary key 唯一健（唯一，可以有很多）：unique，被unique修饰的数据不能够重复  一个栗子
+USE kzq; DROP TABLE students; CREATE TABLE students( id BIGINT(20) AUTO_INCREMENT PRIMARY KEY COMMENT &amp;#39;学生编号&amp;#39;, stuName VARCHAR(40) COMMENT &amp;#39;学生姓名&amp;#39;, gender VARCHAR(2) DEFAULT &amp;#39;男&amp;#39; COMMENT &amp;#39;性别&amp;#39;, className VARCHAR(20) NOT NULL COMMENT &amp;#39;班级&amp;#39;, phone VARCHAR(20) UNIQUE COMMENT &amp;#39;手机号码&amp;#39; ) 库与表的创建和删除 -- 创建库 CREATE DATABASE 库名 CHARACTER SET 编码名 CREATE DATABASE kzq CHARACTER SET utf8 -- 选中某一个数据库 USE 库名 USE kzq -- 创建表 CREATE TABLE 表名( 字段1 数据类型 COMMENT .</description>
+    </item>
+    
+  </channel>
+</rss>

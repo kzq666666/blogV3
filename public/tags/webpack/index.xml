@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>webpack on KiWaTo</title>
+    <link>https://kangzhiqing.com/tags/webpack/</link>
+    <description>Recent content in webpack on KiWaTo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 Feb 2019 14:29:05 +0800</lastBuildDate><atom:link href="https://kangzhiqing.com/tags/webpack/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Webpack</title>
+      <link>https://kangzhiqing.com/post/webpack/</link>
+      <pubDate>Fri, 15 Feb 2019 14:29:05 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/webpack/</guid>
+      <description>官网 文档
+Entry Webpack的入口，通过入口文件，webpack开始搭建内部依赖网
+// webpack.config.js module.exports = { entry: &amp;#39;./path/to/my/entry/file.js&amp;#39; }; Output 输出配置
+module.exports = { output: { filename: &amp;#39;bundle.js&amp;#39;, } }; Mode 主要是两种环境，开发环境（development）和生产环境（production），相应的环境，webpack会做出具体的优化方案。 （default：production）
+module.exports = { mode: &amp;#39;production&amp;#39; // &amp;#39;development&amp;#39; } Loaders 加载器，用于加载资源，如scss文件或者将一些拓展语言（TypeScript,Scss）转换成合适的格式。 webpack内置可以处理的文件类型：JSON
+module.exports = { module: { rules: [ { test: /\.css$/, use: &amp;#39;css-loader&amp;#39; }, { test: /\.ts$/, use: &amp;#39;ts-loader&amp;#39; } ] } };  css-loader =&amp;gt; 处理.css文件 style-loader =&amp;gt; 通过&amp;lt;style&amp;gt;标签将css-loader内部样式注入到html中 Less-loader Sass-loader post-css-loader  Plugins 插件，webpack的支柱，webpack本身就是建立在类似的插件系统上的。</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,22 +6,49 @@
     <description>Recent content in Categories on KiWaTo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kangzhiqing.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Nov 2020 16:57:45 +0800</lastBuildDate><atom:link href="https://kangzhiqing.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test</title>
-      <link>https://kangzhiqing.com/categories/test/</link>
-      <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
+      <title>随记</title>
+      <link>https://kangzhiqing.com/categories/%E9%9A%8F%E8%AE%B0/</link>
+      <pubDate>Thu, 12 Nov 2020 16:57:45 +0800</pubDate>
       
-      <guid>https://kangzhiqing.com/categories/test/</guid>
+      <guid>https://kangzhiqing.com/categories/%E9%9A%8F%E8%AE%B0/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>测试</title>
-      <link>https://kangzhiqing.com/categories/%E6%B5%8B%E8%AF%95/</link>
-      <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
+      <title>Tech</title>
+      <link>https://kangzhiqing.com/categories/tech/</link>
+      <pubDate>Thu, 16 Apr 2020 23:43:52 +0800</pubDate>
       
-      <guid>https://kangzhiqing.com/categories/%E6%B5%8B%E8%AF%95/</guid>
+      <guid>https://kangzhiqing.com/categories/tech/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>前端</title>
+      <link>https://kangzhiqing.com/categories/%E5%89%8D%E7%AB%AF/</link>
+      <pubDate>Thu, 16 Apr 2020 23:43:52 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/categories/%E5%89%8D%E7%AB%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>music</title>
+      <link>https://kangzhiqing.com/categories/music/</link>
+      <pubDate>Thu, 16 Apr 2020 10:11:18 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/categories/music/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Diary</title>
+      <link>https://kangzhiqing.com/categories/diary/</link>
+      <pubDate>Sat, 12 Oct 2019 15:35:27 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/categories/diary/</guid>
       <description></description>
     </item>
     

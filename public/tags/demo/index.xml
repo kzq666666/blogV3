@@ -13,7 +13,7 @@
       <pubDate>Thu, 23 May 2019 16:11:03 +0800</pubDate>
       
       <guid>https://kangzhiqing.com/post/cssdemo/</guid>
-      <description>水波效果 .waterWaves { position: relative; width: 200px; height: 200px; border: 1px solid #999; border-radius: 50%; text-align: center; line-height: 100px; margin: 100px auto; animation: wave linear infinite; overflow: hidden; } .wave1 { position: absolute; width: 200%; height: 200%; background: skyblue; opacity: 0.4; left: -50%; top: 50%; border-radius: 180px; animation: inherit; animation-duration: 7s; } .wave2 { position: absolute; width: 200%; height: 200%; background: skyblue; opacity: 0.6; left: -30%; top: 60%; border-radius: 45%; animation: inherit; animation-duration: 10s; } .</description>
+      <description>水波效果 .waterWaves{position: relative;width: 200px;height: 200px;border: 1px solid #999;border-radius: 50%;text-align: center;line-height: 100px;margin: 100px auto;animation: wave linear infinite;overflow:hidden;}.wave1{position: absolute;width: 200%;height: 200%;background:skyblue;opacity: 0.4;left: -50%;top: 50%;border-radius: 180px;animation: inherit;animation-duration: 7s;}.wave2{position: absolute;width: 200%;height: 200%;background:skyblue;opacity: 0.6;left: -30%;top: 60%;border-radius: 45%;animation: inherit;animation-duration: 10s;}.</description>
     </item>
     
   </channel>

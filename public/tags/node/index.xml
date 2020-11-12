@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Node on KiWaTo</title>
+    <link>https://kangzhiqing.com/tags/node/</link>
+    <description>Recent content in Node on KiWaTo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 27 Nov 2018 17:04:59 +0800</lastBuildDate><atom:link href="https://kangzhiqing.com/tags/node/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Node</title>
+      <link>https://kangzhiqing.com/post/node/</link>
+      <pubDate>Tue, 27 Nov 2018 17:04:59 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/node/</guid>
+      <description>开此篇记录下学习node的过程和一些笔记
+Node.js的一些特性  基于Chrome的V8引擎 事件驱动、非堵塞、单线程 Node.js是一个非阻塞的系统，当调用一些需要阻塞的等待或者事件，node会采用回调函数替代闲置等待，即事件驱动。就像我们在学校经常吃饭点餐的情况，点完餐之后店家会给个小票，上面有这此点餐的号码，到时候菜做好了就会叫号，这个号码相当于回调号码，这样就提高了效率，继续为下一个客人服务。 串行IO和并行IO，类似于同步和异步，前者的运行顺序是固定的，后者任何一个IO操作返回时间都是不确定的，如果IO操作有关联的话就要使用串行IO。按顺序的串行请求，无序的并行的请求  模块加载  require导入 exports导出  核心模块 files // ---------files--------- // Node.js利用流的方式来处理文件 // 引入模块 var fs = require(&amp;#39;fs&amp;#39;); // 1.写文件，当前路径下没有就创建一个，如果存在就覆盖 fs.writeFile(&amp;#39;./test.txt&amp;#39;, &amp;#39;异步写入一些数据&amp;#39;, &amp;#39;utf8&amp;#39;, function(err){ if(err){ console.log(&amp;#39;写入失败&amp;#39;) throw err }else{ console.log(&amp;#39;写入成功&amp;#39;) } }) fs.writeFileSync(&amp;#39;./test.txt&amp;#39;,&amp;#39;同步写入一些数据&amp;#39;,&amp;#39;utf8&amp;#39;) // 2.读文件，如果不加编码类型，则data返回的就是一个buffer缓冲区，里面存有二进制数据 fs.readFile(&amp;#39;./test.txt&amp;#39;,&amp;#39;utf8&amp;#39;,function(err, data){ console.log(data) }) // 3.追加文件，如果没有则创建一个 fs.appendFileSync(&amp;#39;./log.txt&amp;#39;, &amp;#39;同步追加，写入时间：&amp;#39;+new Date().toLocaleString()+&amp;#39;\n&amp;#39;) fs.appendFile(&amp;#39;./log.txt&amp;#39;,&amp;#39;异步追加，写入时间：&amp;#39;+new Date().toLocaleString()+&amp;#39;\n&amp;#39;,function(err){ if(err){ console.log(&amp;#39;添加失败&amp;#39;) }else{ console.log(&amp;#39;添加成功&amp;#39;) } }) // 4.监听文件，文件只要修改了就会执行回调函数 fs.watchFile(&amp;#39;./log.txt&amp;#39;, function(cuur,prev) { console.log(prev); }) // 5.判断文件是否存在，存在返回true，不存在返回false var res = fs.</description>
+    </item>
+    
+  </channel>
+</rss>

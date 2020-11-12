@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='1. return !1 和 return false 以及 return 0! 和 return true写法有什么区别 tween.min.js的源码 update: function(c) { if (0 === a.length) return !1; for ( var b = 0, d = a.length, c = void 0 !== c ? c : Date.now(); b &amp;lt; d; ) a[b].update(c) ? b&#43;&#43; : (a.splice(b, 1), d--); return !0; } 2. void 和 undefined 有什么区别(详细请看这里) A : void是一种操作符,无论void后的表达式是什么，void操作符都会返回undefined.但undefined不是保留字,undefined可以作为变量使用,所以在使用undefined作为变量名的时候容易出错,因此使用void可以确保取到undefined值
+function x() { var undefined = &amp;#39;hello world&amp;#39;, f = {}, window = { &amp;#39;undefined&amp;#39;: &amp;#39;joke&amp;#39; }; console.'><title>Q &amp;&amp; A</title>
+
+<link rel='canonical' href='https://kangzhiqing.com/post/q-a/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Q &amp;&amp; A'>
+<meta property='og:description' content='1. return !1 和 return false 以及 return 0! 和 return true写法有什么区别 tween.min.js的源码 update: function(c) { if (0 === a.length) return !1; for ( var b = 0, d = a.length, c = void 0 !== c ? c : Date.now(); b &amp;lt; d; ) a[b].update(c) ? b&#43;&#43; : (a.splice(b, 1), d--); return !0; } 2. void 和 undefined 有什么区别(详细请看这里) A : void是一种操作符,无论void后的表达式是什么，void操作符都会返回undefined.但undefined不是保留字,undefined可以作为变量使用,所以在使用undefined作为变量名的时候容易出错,因此使用void可以确保取到undefined值
+function x() { var undefined = &amp;#39;hello world&amp;#39;, f = {}, window = { &amp;#39;undefined&amp;#39;: &amp;#39;joke&amp;#39; }; console.'>
+<meta property='og:url' content='https://kangzhiqing.com/post/q-a/'>
+<meta property='og:site_name' content='KiWaTo'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Question' /><meta property='article:published_time' content='2018-11-16T10:01:19&#43;08:00'/><meta property='article:modified_time' content='2018-11-16T10:01:19&#43;08:00'/><meta property='og:image' content='https://kangzhiqing.com/img/avator.jpg' />
+<meta name="twitter:title" content="Q &amp;&amp; A">
+<meta name="twitter:description" content="1. return !1 和 return false 以及 return 0! 和 return true写法有什么区别 tween.min.js的源码 update: function(c) { if (0 === a.length) return !1; for ( var b = 0, d = a.length, c = void 0 !== c ? c : Date.now(); b &amp;lt; d; ) a[b].update(c) ? b&#43;&#43; : (a.splice(b, 1), d--); return !0; } 2. void 和 undefined 有什么区别(详细请看这里) A : void是一种操作符,无论void后的表达式是什么，void操作符都会返回undefined.但undefined不是保留字,undefined可以作为变量使用,所以在使用undefined作为变量名的时候容易出错,因此使用void可以确保取到undefined值
+function x() { var undefined = &amp;#39;hello world&amp;#39;, f = {}, window = { &amp;#39;undefined&amp;#39;: &amp;#39;joke&amp;#39; }; console."><meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content='https://kangzhiqing.com/img/avator.jpg' />
+    </head>
+    <body class="">
+        <div class="container flex on-phone--column align-items--flex-start extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+
+                
+                    
+                    <img src="/img/avator_huc7b1b351868fe3a4d1b5c06893a6fc12_78414_300x300_resize_q75_box.jpg" width="300"
+                        height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+
+                <span class="emoji">🍥</span>
+            </figure>
+        
+        <h1 class="site-name"><a href="https://kangzhiqing.com">KiWaTo</a></h1>
+        <h2 class="site-description">生有热烈，藏于俗常</h2>
+        <h2 class="site-description">
+            <a href="https://github.com/kzq666666" target="_blank">
+                <svg t="1605197048989" class="icon" viewBox="0 0 1049 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1139" width="25" height="25" ><path d="M524.979332 0C234.676191 0 0 234.676191 0 524.979332c0 232.068678 150.366597 428.501342 358.967656 498.035028 26.075132 5.215026 35.636014-11.299224 35.636014-25.205961 0-12.168395-0.869171-53.888607-0.869171-97.347161-146.020741 31.290159-176.441729-62.580318-176.441729-62.580318-23.467619-60.841976-58.234462-76.487055-58.234463-76.487055-47.804409-32.15933 3.476684-32.15933 3.476685-32.15933 53.019436 3.476684 80.83291 53.888607 80.83291 53.888607 46.935238 79.963739 122.553122 57.365291 152.97411 43.458554 4.345855-33.897672 18.252593-57.365291 33.028501-70.402857-116.468925-12.168395-239.022047-57.365291-239.022047-259.012982 0-57.365291 20.860106-104.300529 53.888607-140.805715-5.215026-13.037566-23.467619-66.926173 5.215027-139.067372 0 0 44.327725-13.906737 144.282399 53.888607 41.720212-11.299224 86.917108-17.383422 131.244833-17.383422s89.524621 6.084198 131.244833 17.383422C756.178839 203.386032 800.506564 217.29277 800.506564 217.29277c28.682646 72.1412 10.430053 126.029806 5.215026 139.067372 33.897672 36.505185 53.888607 83.440424 53.888607 140.805715 0 201.64769-122.553122 245.975415-239.891218 259.012982 19.121764 16.514251 35.636014 47.804409 35.636015 97.347161 0 70.402857-0.869171 126.898978-0.869172 144.282399 0 13.906737 9.560882 30.420988 35.636015 25.205961 208.601059-69.533686 358.967656-265.96635 358.967655-498.035028C1049.958663 234.676191 814.413301 0 524.979332 0z" fill="#191717" p-id="1140"></path><path d="M199.040177 753.571326c-0.869171 2.607513-5.215026 3.476684-8.691711 1.738342s-6.084198-5.215026-4.345855-7.82254c0.869171-2.607513 5.215026-3.476684 8.691711-1.738342s5.215026 5.215026 4.345855 7.82254z m-6.953369-4.345856M219.900283 777.038945c-2.607513 2.607513-7.82254 0.869171-10.430053-2.607514-3.476684-3.476684-4.345855-8.691711-1.738342-11.299224 2.607513-2.607513 6.953369-0.869171 10.430053 2.607514 3.476684 4.345855 4.345855 9.560882 1.738342 11.299224z m-5.215026-5.215027M240.760389 807.459932c-3.476684 2.607513-8.691711 0-11.299224-4.345855-3.476684-4.345855-3.476684-10.430053 0-12.168395 3.476684-2.607513 8.691711 0 11.299224 4.345855 3.476684 4.345855 3.476684 9.560882 0 12.168395z m0 0M269.443034 837.011749c-2.607513 3.476684-8.691711 2.607513-13.906737-1.738342-4.345855-4.345855-6.084198-10.430053-2.607513-13.037566 2.607513-3.476684 8.691711-2.607513 13.906737 1.738342 4.345855 3.476684 5.215026 9.560882 2.607513 13.037566z m0 0M308.555733 853.526c-0.869171 4.345855-6.953369 6.084198-13.037566 4.345855-6.084198-1.738342-9.560882-6.953369-8.691711-10.430053 0.869171-4.345855 6.953369-6.084198 13.037566-4.345855 6.084198 1.738342 9.560882 6.084198 8.691711 10.430053z m0 0M351.145116 857.002684c0 4.345855-5.215026 7.82254-11.299224 7.82254-6.084198 0-11.299224-3.476684-11.299224-7.82254s5.215026-7.82254 11.299224-7.82254c6.084198 0 11.299224 3.476684 11.299224 7.82254z m0 0M391.126986 850.049315c0.869171 4.345855-3.476684 8.691711-9.560882 9.560882-6.084198 0.869171-11.299224-1.738342-12.168395-6.084197-0.869171-4.345855 3.476684-8.691711 9.560881-9.560882 6.084198-0.869171 11.299224 1.738342 12.168396 6.084197z m0 0" fill="#191717" p-id="1141"></path></svg></a>
+            &nbsp;
+            <a href="https://weibo.com/u/5266337631" target="_blank"><svg t="1605197446554" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3700" width="28.5" height="28.5"s tyle="margin-top:12px"><path d="M834.168832 433.01888c13.328384 0 24.674304-10.022912 26.566656-23.099392 0.237568-0.9728 0.360448-1.828864 0.360448-2.926592 20.20352-184.64768-148.846592-152.866816-148.846592-152.866816-15.007744 0-27.019264 12.345344-27.019264 27.74016 0 15.147008 12.01152 27.488256 27.019264 27.488256 121.444352-27.246592 94.644224 96.17408 94.644224 96.17408-0.006144 15.271936 12.208128 27.490304 27.275264 27.490304z" fill="#2D333A" p-id="3701"></path><path d="M814.47936 110.739456c-58.468352-13.914112-118.562816-1.923072-135.399424 1.355776-1.294336 0.12288-2.525184 1.37216-3.723264 1.613824-0.57344 0.12288-0.929792 0.735232-0.929792 0.735232-16.631808 4.773888-28.760064 20.396032-28.760064 38.856704 0 21.999616 17.528832 40.091648 39.442432 40.091648 0 0 21.250048-2.895872 35.688448-8.63232 14.311424-5.863424 135.340032-4.364288 195.493888 98.275328 32.774144 74.9056 14.399488 125.038592 12.122112 133.093376 0 0-7.806976 19.464192-7.806976 38.627328 0 22.126592 17.528832 36.016128 39.262208 36.016128 18.184192 0 33.431552-2.514944 37.906432-33.757184h0.237568c64.579584-218.70592-78.96064-321.47456-183.533568-346.27584zM753.606656 501.215232c-39.049216-7.704576-20.047872-29.083648-20.047872-29.083648s38.207488-64.043008-7.569408-110.604288c-56.758272-57.665536-194.65216 7.337984-194.65216 7.337984-52.670464 16.613376-38.690816-7.581696-31.246336-48.756736 0-48.510976-16.355328-130.623488-156.649472-82.120704C203.298816 286.744576 82.939904 457.582592 82.939904 457.582592-0.743424 571.099136 10.36288 658.837504 10.36288 658.837504c20.8896 193.687552 223.348736 246.85568 380.811264 259.444736 165.654528 13.207552 389.265408-58.056704 457.04192-204.45184 67.805184-146.634752-55.40864-204.668928-94.609408-212.615168zM403.447808 863.664128c-164.491264 7.81312-297.424896-76.019712-297.424896-187.588608 0-111.691776 132.933632-201.254912 297.424896-208.959488 164.544512-7.704576 297.756672 61.216768 297.756672 172.67712 0.002048 111.556608-133.216256 216.274944-297.756672 223.870976z" fill="#2D333A" p-id="3702"></path><path d="M370.60608 540.684288c-165.382144 19.675136-146.290688 177.174528-146.290688 177.174528s-1.683456 49.872896 44.361728 75.27424c96.774144 53.291008 196.421632 21.02272 246.788096-45.062144 50.364416-66.125824 20.830208-226.934784-144.859136-207.386624zM328.886272 761.73312c-30.851072 3.680256-55.764992-14.411776-55.764992-40.68352 0-26.15296 22.120448-53.532672 53.006336-56.81152 35.479552-3.432448 58.591232 17.342464 58.591232 43.618304-0.004096 26.146816-25.032704 50.3296-55.832576 53.876736z m97.523712-84.432896c-10.479616 7.94624-23.32672 6.846464-28.848128-2.689024-5.76512-9.28768-3.600384-24.193024 6.967296-32.022528 12.238848-9.271296 24.999936-6.598656 30.52544 2.70336 5.55008 9.519104 1.591296 23.814144-8.644608 32.008192z" fill="#2D333A" p-id="3703"></path></svg></a>
+            <a href="https://www.zhihu.com/people/kang-zhi-qing-19" target="_blank"><svg t="1605197596199" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4673" width="27" height="27"><path d="M564.7 230.1V803h60l25.2 71.4L756.3 803h131.5V230.1H564.7z m247.7 497h-59.9l-75.1 50.4-17.8-50.4h-18V308.3h170.7v418.8zM526.1 486.9H393.3c2.1-44.9 4.3-104.3 6.6-172.9h130.9l-0.1-8.1c0-0.6-0.2-14.7-2.3-29.1-2.1-15-6.6-34.9-21-34.9H287.8c4.4-20.6 15.7-69.7 29.4-93.8l6.4-11.2-12.9-0.7c-0.8 0-19.6-0.9-41.4 10.6-35.7 19-51.7 56.4-58.7 84.4-18.4 73.1-44.6 123.9-55.7 145.6-3.3 6.4-5.3 10.2-6.2 12.8-1.8 4.9-0.8 9.8 2.8 13 10.5 9.5 38.2-2.9 38.5-3 0.6-0.3 1.3-0.6 2.2-1 13.9-6.3 55.1-25 69.8-84.5h56.7c0.7 32.2 3.1 138.4 2.9 172.9h-141l-2.1 1.5c-23.1 16.9-30.5 63.2-30.8 65.2l-1.4 9.2h167c-12.3 78.3-26.5 113.4-34 127.4-3.7 7-7.3 14-10.7 20.8-21.3 42.2-43.4 85.8-126.3 153.6-3.6 2.8-7 8-4.8 13.7 2.4 6.3 9.3 9.1 24.6 9.1 5.4 0 11.8-0.3 19.4-1 49.9-4.4 100.8-18 135.1-87.6 17-35.1 31.7-71.7 43.9-108.9L497 850l5-12c0.8-1.9 19-46.3 5.1-95.9l-0.5-1.8-108.1-123-22 16.6c6.4-26.1 10.6-49.9 12.5-71.1h158.7v-8c0-40.1-18.5-63.9-19.2-64.9l-2.4-3z" p-id="4674"></path></svg></a>
+
+        </h2>
+        <h2 class="site-description">
+        </h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+    </ol>
+</aside>
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://kangzhiqing.com" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+                <a href="/categories/tech/">Tech</a>
+            
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/post/q-a/">Q &amp;&amp; A</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">2018年11月16日</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <h3 id="1-return-1-和-return-false-以及-return-0-和-return-true写法有什么区别">1. return !1 和 return false 以及 return 0! 和 return true写法有什么区别</h3>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">tween</span><span class="p">.</span><span class="nx">min</span><span class="p">.</span><span class="nx">js的源码</span>
+<span class="nx">update</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="mi">0</span> <span class="o">===</span> <span class="nx">a</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="k">return</span> <span class="o">!</span><span class="mi">1</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span>
+          <span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">d</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span> <span class="nx">c</span> <span class="o">=</span> <span class="k">void</span> <span class="mi">0</span> <span class="o">!==</span> <span class="nx">c</span> <span class="o">?</span> <span class="nx">c</span> <span class="o">:</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">();</span>
+          <span class="nx">b</span> <span class="o">&lt;</span> <span class="nx">d</span><span class="p">;</span>
+
+        <span class="p">)</span>
+          <span class="nx">a</span><span class="p">[</span><span class="nx">b</span><span class="p">].</span><span class="nx">update</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span> <span class="o">?</span> <span class="nx">b</span><span class="o">++</span> <span class="o">:</span> <span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="nx">d</span><span class="o">--</span><span class="p">);</span>
+        <span class="k">return</span> <span class="o">!</span><span class="mi">0</span><span class="p">;</span>
+      <span class="p">}</span>
+</code></pre></div><h3 id="2-void-和-undefined-有什么区别详细请看这里httpssegmentfaultcoma1190000000474941">2. void 和 undefined 有什么区别(详细请看<a class="link" href="https://segmentfault.com/a/1190000000474941"  target="_blank" rel="noopener"
+    >这里</a>)</h3>
+<p>A : void是一种操作符,无论void后的表达式是什么，void操作符都会返回undefined.但undefined不是<a class="link" href="https://baike.baidu.com/item/%E4%BF%9D%E7%95%99%E5%AD%97"  target="_blank" rel="noopener"
+    ><code>保留字</code></a>,undefined可以作为变量使用,所以在使用undefined作为变量名的时候容易出错,因此使用void可以确保取到undefined值</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">x</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kd">var</span> <span class="kc">undefined</span> <span class="o">=</span> <span class="s1">&#39;hello world&#39;</span><span class="p">,</span>
+       <span class="nx">f</span> <span class="o">=</span> <span class="p">{},</span>
+       <span class="nb">window</span> <span class="o">=</span> <span class="p">{</span>
+           <span class="s1">&#39;undefined&#39;</span><span class="o">:</span> <span class="s1">&#39;joke&#39;</span>
+       <span class="p">};</span>
+   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="kc">undefined</span><span class="p">);</span><span class="c1">// hello world
+</span><span class="c1"></span>   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="kc">undefined</span><span class="p">);</span> <span class="c1">//joke
+</span><span class="c1"></span>   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">f</span><span class="p">.</span><span class="nx">a</span> <span class="o">===</span> <span class="kc">undefined</span><span class="p">);</span> <span class="c1">//false
+</span><span class="c1"></span>   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">f</span><span class="p">.</span><span class="nx">a</span> <span class="o">===</span> <span class="k">void</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">//true
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><ul>
+<li>void还有一个经常使用到的作用,就是在a标签的href中使用,填充href,使它不跳转而是进行一些交互,比如在许多网站中的收藏,快转功能.</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;javascript:void(0)&#34;</span><span class="p">&gt;</span>
+</code></pre></div><ul>
+<li>生成一个空的src的img标签的最好的方式似乎是使用<code>src=&quot;javascript:void(0)&quot;</code>
+<br>详情请看<a class="link" href="https://stackoverflow.com/questions/5775469/whats-the-valid-way-to-include-an-image-with-no-src"  target="_blank" rel="noopener"
+    >What&rsquo;s the valid way to include an image with no src?</a></li>
+</ul>
+<p><br> Tip : 关于此问题更加详细请看<a class="link" href="https://segmentfault.com/a/1190000000474941"  target="_blank" rel="noopener"
+    >这里</a></p>
+<h3 id="3nulla-和-anull的区别">3.null!=a 和 a!=null的区别</h3>
+<h3 id="4常见的获取元素宽高的方式及其区别">4.常见的获取元素宽高的方式及其区别</h3>
+<ul>
+<li>dom.style.width/height 
+<br>这种方式只能获取dom元素<code>内联样式</code>的宽高，而style标签的样式和外联样式使获取不到的。修改样式用这个还是可以的</li>
+<li>dom.currentStyle.width/height 
+<br>无论哪种样式都可以获得，不过只有IE浏览器支持(我亲测了chrome和firefox都是不兼容的)。只读</li>
+<li>window.getComputedStyle(element,[preudoElt]).width/height
+<br>首先getComputedStyle(element,[preudoElt])返回的是一个实时的css属性对象preudoElt是伪元素(可选),对于普通元素就是设置为null即可。兼容性更好(IE、firefox、chrome都可以)。只读</li>
+<li>dom.offsetWidth/offsetHeight 
+<br>兼容性很好，常用，且返回值是数字，不带单位。只读</li>
+<li>dom.getBoundingClientRect().width/height
+<br>getBoundingClientRect()返回的是一个元素的绝对位置的DomRect对象，里面有top、bottom、left、right、width、height,IE不兼容getBoundingClientRect(),IE兼容getClientRects(),其他浏览器都兼容，返回值是数值，不带单位。只读</li>
+</ul>
+<p><br>以上，个人觉得offsetWidth比较方便一些</p>
+<h3 id="5windowonload和documentready方法的区别">5.window.onload和$(document).ready()方法的区别</h3>
+<p>A：window.onload事件会在页面所有元素加载完成后立即发生。而$(document).ready()是在DOM树加载完毕之后对其进行操作</p>
+<h3 id="6v-if和v-else使用应该注意什么">6.v-if和v-else使用应该注意什么？</h3>
+<ul>
+<li>他们必须是兄弟节点！！！</li>
+<li>v-else上一个节点必须是v-if！！！</li>
+</ul>
+<h3 id="7-常见的水平居中的方法">7. 常见的水平居中的方法？</h3>
+<ul>
+<li>text-align:center;  (具有文本特性的元素水平居中,display为inline或者为inline-block)</li>
+<li>margin:0 auto (块级元素，且自身要有宽度)</li>
+<li>position:left;left:50%;margin-left:-元素高度/2;     (元素高度已知)</li>
+<li>position:left;left:50%;transform:translateX(-50%); (元素高度未知)</li>
+<li>display:flex;justify-content:center;</li>
+</ul>
+<h3 id="8-常见的垂直居中的方法">8. 常见的垂直居中的方法？</h3>
+<h3 id="9-常见的水平垂直居中的方法">9. 常见的水平垂直居中的方法？</h3>
+<h3 id="10-calc使用注意事项">10. calc使用注意事项</h3>
+<p>运算符前后必须要有空格，如calc(100% - 20px);</p>
+<h3 id="11-background-size中cover和contain有什么区别">11. background-size中cover和contain有什么区别</h3>
+<p>两者都是等比例缩放。
+<br>cover：如果容器的宽高比和照片的宽高比不同，那么图片就会等比例缩放到塞满整个容器，图片多余的部分就会被裁剪
+<br>contain：图片等比列缩放至全部都展示出来，所以可能会有留白</p>
+<h3 id="12-js中关系运算符中大于和小于是怎么比较的">12. js中关系运算符中大于和小于是怎么比较的？</h3>
+<ul>
+<li>字符串和字符串比较，比较第一个不同的字符的ASCII码</li>
+<li>数字和纯数字字符串比较，将纯数字字符串转换为数字比较</li>
+<li>数字和非纯数字字符串比较，返回false</li>
+<li>特殊字符 null 和 undefined 进行比较的时候，null == undefined，undefined和除了null的其他所有值进行比较都是false</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 关系运算符 和 相等运算符 并不是一个类别的.
+</span><span class="c1">// 关系运算符,在设计上,总是需要运算元尝试转为一个number . 而相等运算符在设计上,则没有这方面的考虑.
+</span><span class="c1">// 最重要的一点, 不要把 拿 a &gt; b , a == b 的结果 想当然的去和 a &gt;= b 建立联系. 正确的符合最初设计思想的关系是 a &gt; b 与 a &gt;= b是一组 . a == b 和其他相等运算符才是一组. 比如 a === b , a != b, a !== b .
+</span><span class="c1"></span><span class="kc">null</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="c1">// null尝试转型为number，则为0，所以结果是false
+</span><span class="c1"></span><span class="kc">null</span> <span class="o">&gt;=</span><span class="mi">0</span> <span class="c1">// null尝试转型为number，则为0，所以结果是true
+</span><span class="c1"></span><span class="kc">null</span> <span class="o">==</span> <span class="mi">0</span> <span class="c1">// null在设计上不尝试转型，所以结果是false
+</span></code></pre></div><p>关于null的问题，参考了关于这个问题的回答=&gt;<a class="link" href="https://www.jb51.net/article/106370.htm"  target="_blank" rel="noopener"
+    >传送门</a></p>
+<h3 id="13js引擎中对变量的查询方式lhs和rhs有什么区别">13.JS引擎中对变量的查询方式LHS和RHS有什么区别？</h3>
+<p>LHS和RHS是JS引擎的两种查找方式，赋值操作的左侧和右侧
+<br>LHS：找到目标，对其赋值，赋值操作的目标
+<br>RHS：找到源头，得到ta的原值，赋值操作的源头
+<br>不同的查找方式结果不一样，如果查找到最顶层的全局作用域下也没有找到变量的话，RHS查找就会抛出异常，而LHS查找方式在非严格模式会在全局作用域隐式的创建该变量，而严格模式则一样会抛出ReferenceError（ES5推出的严格模式不允许自动或者隐式的创建变量）
+<br>简单的说就是，如果查找的目的是对变量进行赋值，那么就会使用LHS查询，如果目的是获取变量的值，就会使用RHS查询。</p>
+<h3 id="14什么是闭包">14.什么是闭包？</h3>
+<p>当函数可以记住并访问所在的词法作用域，即使函数是在当前词法作用域之外执行，这时就产生了闭包。函数的执行期上下文没有被销毁</p>
+<h3 id="15objectcreatenull和创建空对象的方式有什么区别">15.Object.create(null)和{}创建空对象的方式有什么区别？</h3>
+<p>Object.create(null)创建的对象比{}更‘空’，因为前者是没有创建Object.prototype原型的，而{}则会创建这个原型。</p>
+<h3 id="16如何判断this指向">16.如何判断this指向？</h3>
+<p>1.由new调用？绑定到新创建的对象
+2.由call或者apply或者bind调用？绑定到指定的对象
+3.由上下文对象调用？绑定到那个上下文对象
+4.默认：在严格模式下绑定到undefined，非严格模式绑定到全局对象</p>
+<h3 id="17什么是事件冒泡和捕获一个事件的执行顺序是怎样的">17.什么是事件冒泡和捕获？一个事件的执行顺序是怎样的？</h3>
+<p>事件冒泡和捕获都是事件的执行顺序，事件捕获是从上到下依次执行，而事件冒泡是从下到上执行。DOM事件流分三个阶段：捕获阶段=&gt; 目标阶段（真正的目标节点正在处理事件的阶段） =&gt; 冒泡阶段，就好比猛地将一个瓶子扔到水里，它会下沉一段距离，然后再浮上来。</p>
+<h3 id="18什么是事件委托有什么用">18.什么是事件委托？有什么用？</h3>
+<p>事件委托是利用事件冒泡的原理，避免过多的操作DOM元素，利用其父级元素完成相应的事件操作。优化页面。</p>
+<h3 id="19addeventlistener-和-onclick一类-绑定事件有什么区别">19.addEventListener 和 onclick一类 绑定事件有什么区别？</h3>
+<ul>
+<li>addEventListener可以给一个事件绑定不同的监听器，而onclick一类只能一个事件只能绑定一个，同时绑定多个会覆盖。</li>
+<li>addEventListener更加灵活，可以选择事件执行顺序是冒泡（第三个参数为false）还是捕获（第三个参数为true）</li>
+</ul>
+<h3 id="20-__proto__-和-prototype有什么区别">20. <strong>proto</strong> 和 prototype有什么区别？</h3>
+<h3 id="21-instanceof的用法">21. instanceof的用法？</h3>
+<h3 id="22-常见js迭代器">22. 常见js迭代器？</h3>
+<ul>
+<li>forEach</li>
+<li>some</li>
+<li>every</li>
+<li>for&hellip;in
+遍历索引</li>
+<li>for&hellip;of
+遍历元素</li>
+</ul>
+<h3 id="23lf-和-crlf-换行符有什么不同">23.LF 和 CRLF 换行符有什么不同?</h3>
+<h4 id="一些题目">一些题目</h4>
+<p>1 关于this指向</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// this指向的是调用它的对象，如果没有直接调用对象，会指向undefined或者window，一般都会指向window，在严格模式下才会指向undefined
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">a</span><span class="p">(</span><span class="nx">xx</span><span class="p">){</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="nx">xx</span><span class="p">;</span>
+  <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="nx">a</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>  <span class="c1">// window.x = 5 , return this,  x = window
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="nx">a</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>  <span class="c1">// window.x = 6 , return this,  y = window
+</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">.</span><span class="nx">x</span><span class="p">);</span> <span class="c1">// x = 6 , x.x =&gt; undefined
+</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">y</span><span class="p">.</span><span class="nx">x</span><span class="p">);</span> <span class="c1">// y = window , widow.x = 6
+</span><span class="c1"></span>
+<span class="c1">// -----------------分割线-----------------------
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;222&#39;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;111&#39;</span><span class="p">,</span>
+  <span class="nx">say</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>  <span class="c1">//谁调用this就指向谁
+</span><span class="c1"></span>  <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">fun</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">say</span><span class="p">;</span>   
+<span class="nx">fun</span><span class="p">();</span>   <span class="c1">// this指向window, this.name = &#39;222&#39;
+</span><span class="c1"></span><span class="nx">a</span><span class="p">.</span><span class="nx">say</span><span class="p">();</span> <span class="c1">// this指向a, this.name = &#39;111&#39;
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;333&#39;</span><span class="p">,</span>
+  <span class="nx">say</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">fun</span><span class="p">){</span>
+    <span class="nx">fun</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">b</span><span class="p">.</span><span class="nx">say</span><span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">say</span><span class="p">);</span>  
+<span class="c1">// say:function(fun){
+</span><span class="c1">//    this;这里的this指向b
+</span><span class="c1">//    fun();  fun里面的this是在预编译过程中指向window的
+</span><span class="c1">//}
+</span><span class="c1">// 所以这里的this.name = &#39;222&#39;
+</span><span class="c1"></span><span class="nx">fun</span><span class="p">()</span>   <span class="c1">// this指向window, this.name = &#39;222&#39;
+</span><span class="c1"></span><span class="nx">b</span><span class="p">.</span><span class="nx">say</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">say</span><span class="p">;</span>  
+<span class="nx">b</span><span class="p">.</span><span class="nx">say</span><span class="p">();</span>   <span class="c1">// this.name = &#39;333&#39;
+</span><span class="c1"></span>
+<span class="c1">// -------------------分割线--------------------
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">Point</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">){</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="nx">x</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="nx">y</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">moveTo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">){</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="nx">x</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="nx">y</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">x</span> <span class="o">+</span> <span class="s2">&#34;,&#34;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">p1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Point</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">p2</span> <span class="o">=</span> <span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="mi">0</span><span class="p">,</span><span class="nx">y</span><span class="o">:</span><span class="mi">0</span><span class="p">};</span>
+<span class="nx">p1</span><span class="p">.</span><span class="nx">moveTo</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span> <span class="c1">// 1,1
+</span><span class="c1"></span><span class="nx">p1</span><span class="p">.</span><span class="nx">moveTo</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">p2</span><span class="p">,[</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">]);</span> <span class="c1">// 10,10
+</span><span class="c1"></span>
+<span class="c1">// -------------------分割线---------------
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">num</span><span class="o">:</span><span class="mi">0</span><span class="p">,</span>
+  <span class="nx">inner</span><span class="o">:</span><span class="p">{</span>
+    <span class="nx">num</span><span class="o">:</span><span class="mi">6</span><span class="p">,</span>
+    <span class="nx">print</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">num</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">num</span> <span class="o">=</span> <span class="mi">88</span><span class="p">;</span> <span class="c1">// 全局num变为88
+</span><span class="c1"></span><span class="nx">obj</span><span class="p">.</span><span class="nx">inner</span><span class="p">.</span><span class="nx">print</span><span class="p">()</span> <span class="c1">// 6
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">fn</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">inner</span><span class="p">.</span><span class="nx">print</span><span class="p">;</span>
+<span class="nx">fn</span><span class="p">();</span> <span class="c1">// 88
+</span><span class="c1"></span><span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">inner</span><span class="p">.</span><span class="nx">print</span><span class="p">)();</span> <span class="c1">// 6
+</span><span class="c1"></span><span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">inner</span><span class="p">.</span><span class="nx">print</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">inner</span><span class="p">.</span><span class="nx">print</span><span class="p">)();</span> <span class="c1">// 0
+</span></code></pre></div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/question/">Question</a>
+        
+    </section>
+
+
+    </footer>
+
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+    integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
+    integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4"
+    crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+    integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.querySelector(`.article-content`));"></script>
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">相关文章</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/post/three.js/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Three.js</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/post/cssdemo/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">CSSDemo</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/post/jsalg/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">JsAlg</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/post/svg/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SVG</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/post/reswebdesign/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">ResWebDesign</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">&copy; 2020 KiWaTo
+        &nbsp;<a href="https://beian.miit.gov.cn" target="_blank">赣ICP备18016687号</a>
+    </section>
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="1.1.0">Stack</a></b> designed by
+        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true" style="display:none">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+            </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"
+    integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin="anonymous"></script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<link rel="stylesheet" href="/css/highlight/light.min.css" media="(prefers-color-scheme: light)">
+<link rel="stylesheet" href="/css/highlight/dark.min.css" media="(prefers-color-scheme: dark)">
+
+    </body>
+</html>

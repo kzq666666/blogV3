@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on KiWaTo</title>
+    <link>https://kangzhiqing.com/tags/docker/</link>
+    <description>Recent content in docker on KiWaTo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 29 Nov 2018 16:25:34 +0800</lastBuildDate><atom:link href="https://kangzhiqing.com/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker</title>
+      <link>https://kangzhiqing.com/post/docker/</link>
+      <pubDate>Thu, 29 Nov 2018 16:25:34 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/docker/</guid>
+      <description>记录学习docker的过程
+特性 标准化 加速开发和构建流程，方便测试。容器可以在开发环境构建，轻松的提交到测试环境，并最终进入生产环境
+docker核心组件  docker客户端和服务器（C/S）：docker引擎 docker镜像 仓库Registry docker容器  安装 按照官网给的步骤一步一步来就好了 https://docs.docker.com/install/
+启动 $ systemctl start docker 运行一个容器 $ docker run -i -t centos /bin/bash -i 开启标准输入(STDIN) -t 分配伪tty终端 设置了这两个参数就创建了一个我们可以交互的容器
+附着到正在运行的容器 $ docker attach containerId/Name 删除容器 删除一个容器 $ docker rm containerId/Name 删除所有容器(-q是只显示容器id) $ docker rm `docker ps -a -q` 镜像 拉取镜像
+$ docker pull imageName:version 删除镜像
+$ docker rmi imageName:version/id 查看镜像详细信息
+$ docker inspect repositoryName/imageId 将镜像推送到Docker Hub 登录</description>
+    </item>
+    
+  </channel>
+</rss>

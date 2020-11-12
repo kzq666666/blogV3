@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='感谢邱老师这一个学期的数据结构课的教导，让我了解到什么是数据结构和其重要性，以及相关的算法和实现。 这是一篇关于数据结构的复习。
+基本概念 1.程序 = 算法 &#43; 数据结构 &amp;mdash;&amp;mdash; Nicklaus Wirth 一个程序就是通过具体的某种计算机语言将算法进行实现
+2.数据结构：相互之间存在一种或多种特定关系的数据元素的集合 具体什么是数据结构，包含下面三个部分=&amp;gt;
+  逻辑关系：线性关系、非线性关系
+  存储方式：顺序存储、链接存储、散列存储 （存储存的除了要存数据，还要存它们之间的关系，这一点是邱老师在刚上数据结构讲这些基本概念的时候特别强调的，我印象挺深的）
+  运算集合：查找和排序（插入=&amp;gt;直接法，二分法、交换=&amp;gt;冒泡排序，快速排序、选择=&amp;gt;堆排序）
+3.算法：对特定问题求解步骤的一种描述。 一个算法还具有下列 5 个重要特性
+  有穷性 一个算法必须在执行有穷步之后结束，但一个程序则可以无穷，比如说无限死循环
+  确定性 算法的每一条指令必须有确切的含义
+  可行性 一个算法是能行的
+  输入 一个算法有零个或多个输入
+  输出 一个算法有一个或多个输出
+  
+一个好的算法需要达到的目标
+  正确性
+  可读性
+  健壮性 当输入数据非法时，算法也能做出反应或进行处理，即要可以处理一些特殊和极端情况
+  效率和低存储量需求 时间复杂度低，算法执行时间短。满足需求的同时尽可能使用低的存储量消耗
+4.时间复杂度： 算法中基本操作重复执行的次数是问题规模 n 的某个函数 f(n)，即 T(n) = O(f(n)) 5.'><title>数据结构</title>
+
+<link rel='canonical' href='https://kangzhiqing.com/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='数据结构'>
+<meta property='og:description' content='感谢邱老师这一个学期的数据结构课的教导，让我了解到什么是数据结构和其重要性，以及相关的算法和实现。 这是一篇关于数据结构的复习。
+基本概念 1.程序 = 算法 &#43; 数据结构 &amp;mdash;&amp;mdash; Nicklaus Wirth 一个程序就是通过具体的某种计算机语言将算法进行实现
+2.数据结构：相互之间存在一种或多种特定关系的数据元素的集合 具体什么是数据结构，包含下面三个部分=&amp;gt;
+  逻辑关系：线性关系、非线性关系
+  存储方式：顺序存储、链接存储、散列存储 （存储存的除了要存数据，还要存它们之间的关系，这一点是邱老师在刚上数据结构讲这些基本概念的时候特别强调的，我印象挺深的）
+  运算集合：查找和排序（插入=&amp;gt;直接法，二分法、交换=&amp;gt;冒泡排序，快速排序、选择=&amp;gt;堆排序）
+3.算法：对特定问题求解步骤的一种描述。 一个算法还具有下列 5 个重要特性
+  有穷性 一个算法必须在执行有穷步之后结束，但一个程序则可以无穷，比如说无限死循环
+  确定性 算法的每一条指令必须有确切的含义
+  可行性 一个算法是能行的
+  输入 一个算法有零个或多个输入
+  输出 一个算法有一个或多个输出
+  
+一个好的算法需要达到的目标
+  正确性
+  可读性
+  健壮性 当输入数据非法时，算法也能做出反应或进行处理，即要可以处理一些特殊和极端情况
+  效率和低存储量需求 时间复杂度低，算法执行时间短。满足需求的同时尽可能使用低的存储量消耗
+4.时间复杂度： 算法中基本操作重复执行的次数是问题规模 n 的某个函数 f(n)，即 T(n) = O(f(n)) 5.'>
+<meta property='og:url' content='https://kangzhiqing.com/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/'>
+<meta property='og:site_name' content='KiWaTo'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='dataStructure' /><meta property='article:tag' content='structure' /><meta property='article:published_time' content='2018-12-26T09:20:11&#43;08:00'/><meta property='article:modified_time' content='2018-12-26T09:20:11&#43;08:00'/><meta property='og:image' content='https://kangzhiqing.com/img/avator.jpg' />
+<meta name="twitter:title" content="数据结构">
+<meta name="twitter:description" content="感谢邱老师这一个学期的数据结构课的教导，让我了解到什么是数据结构和其重要性，以及相关的算法和实现。 这是一篇关于数据结构的复习。
+基本概念 1.程序 = 算法 &#43; 数据结构 &amp;mdash;&amp;mdash; Nicklaus Wirth 一个程序就是通过具体的某种计算机语言将算法进行实现
+2.数据结构：相互之间存在一种或多种特定关系的数据元素的集合 具体什么是数据结构，包含下面三个部分=&amp;gt;
+  逻辑关系：线性关系、非线性关系
+  存储方式：顺序存储、链接存储、散列存储 （存储存的除了要存数据，还要存它们之间的关系，这一点是邱老师在刚上数据结构讲这些基本概念的时候特别强调的，我印象挺深的）
+  运算集合：查找和排序（插入=&amp;gt;直接法，二分法、交换=&amp;gt;冒泡排序，快速排序、选择=&amp;gt;堆排序）
+3.算法：对特定问题求解步骤的一种描述。 一个算法还具有下列 5 个重要特性
+  有穷性 一个算法必须在执行有穷步之后结束，但一个程序则可以无穷，比如说无限死循环
+  确定性 算法的每一条指令必须有确切的含义
+  可行性 一个算法是能行的
+  输入 一个算法有零个或多个输入
+  输出 一个算法有一个或多个输出
+  
+一个好的算法需要达到的目标
+  正确性
+  可读性
+  健壮性 当输入数据非法时，算法也能做出反应或进行处理，即要可以处理一些特殊和极端情况
+  效率和低存储量需求 时间复杂度低，算法执行时间短。满足需求的同时尽可能使用低的存储量消耗
+4.时间复杂度： 算法中基本操作重复执行的次数是问题规模 n 的某个函数 f(n)，即 T(n) = O(f(n)) 5."><meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content='https://kangzhiqing.com/img/avator.jpg' />
+    </head>
+    <body class="">
+        <div class="container flex on-phone--column align-items--flex-start extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+
+                
+                    
+                    <img src="/img/avator_huc7b1b351868fe3a4d1b5c06893a6fc12_78414_300x300_resize_q75_box.jpg" width="300"
+                        height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+
+                <span class="emoji">🍥</span>
+            </figure>
+        
+        <h1 class="site-name"><a href="https://kangzhiqing.com">KiWaTo</a></h1>
+        <h2 class="site-description">生有热烈，藏于俗常</h2>
+        <h2 class="site-description">
+            <a href="https://github.com/kzq666666" target="_blank">
+                <svg t="1605197048989" class="icon" viewBox="0 0 1049 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1139" width="25" height="25" ><path d="M524.979332 0C234.676191 0 0 234.676191 0 524.979332c0 232.068678 150.366597 428.501342 358.967656 498.035028 26.075132 5.215026 35.636014-11.299224 35.636014-25.205961 0-12.168395-0.869171-53.888607-0.869171-97.347161-146.020741 31.290159-176.441729-62.580318-176.441729-62.580318-23.467619-60.841976-58.234462-76.487055-58.234463-76.487055-47.804409-32.15933 3.476684-32.15933 3.476685-32.15933 53.019436 3.476684 80.83291 53.888607 80.83291 53.888607 46.935238 79.963739 122.553122 57.365291 152.97411 43.458554 4.345855-33.897672 18.252593-57.365291 33.028501-70.402857-116.468925-12.168395-239.022047-57.365291-239.022047-259.012982 0-57.365291 20.860106-104.300529 53.888607-140.805715-5.215026-13.037566-23.467619-66.926173 5.215027-139.067372 0 0 44.327725-13.906737 144.282399 53.888607 41.720212-11.299224 86.917108-17.383422 131.244833-17.383422s89.524621 6.084198 131.244833 17.383422C756.178839 203.386032 800.506564 217.29277 800.506564 217.29277c28.682646 72.1412 10.430053 126.029806 5.215026 139.067372 33.897672 36.505185 53.888607 83.440424 53.888607 140.805715 0 201.64769-122.553122 245.975415-239.891218 259.012982 19.121764 16.514251 35.636014 47.804409 35.636015 97.347161 0 70.402857-0.869171 126.898978-0.869172 144.282399 0 13.906737 9.560882 30.420988 35.636015 25.205961 208.601059-69.533686 358.967656-265.96635 358.967655-498.035028C1049.958663 234.676191 814.413301 0 524.979332 0z" fill="#191717" p-id="1140"></path><path d="M199.040177 753.571326c-0.869171 2.607513-5.215026 3.476684-8.691711 1.738342s-6.084198-5.215026-4.345855-7.82254c0.869171-2.607513 5.215026-3.476684 8.691711-1.738342s5.215026 5.215026 4.345855 7.82254z m-6.953369-4.345856M219.900283 777.038945c-2.607513 2.607513-7.82254 0.869171-10.430053-2.607514-3.476684-3.476684-4.345855-8.691711-1.738342-11.299224 2.607513-2.607513 6.953369-0.869171 10.430053 2.607514 3.476684 4.345855 4.345855 9.560882 1.738342 11.299224z m-5.215026-5.215027M240.760389 807.459932c-3.476684 2.607513-8.691711 0-11.299224-4.345855-3.476684-4.345855-3.476684-10.430053 0-12.168395 3.476684-2.607513 8.691711 0 11.299224 4.345855 3.476684 4.345855 3.476684 9.560882 0 12.168395z m0 0M269.443034 837.011749c-2.607513 3.476684-8.691711 2.607513-13.906737-1.738342-4.345855-4.345855-6.084198-10.430053-2.607513-13.037566 2.607513-3.476684 8.691711-2.607513 13.906737 1.738342 4.345855 3.476684 5.215026 9.560882 2.607513 13.037566z m0 0M308.555733 853.526c-0.869171 4.345855-6.953369 6.084198-13.037566 4.345855-6.084198-1.738342-9.560882-6.953369-8.691711-10.430053 0.869171-4.345855 6.953369-6.084198 13.037566-4.345855 6.084198 1.738342 9.560882 6.084198 8.691711 10.430053z m0 0M351.145116 857.002684c0 4.345855-5.215026 7.82254-11.299224 7.82254-6.084198 0-11.299224-3.476684-11.299224-7.82254s5.215026-7.82254 11.299224-7.82254c6.084198 0 11.299224 3.476684 11.299224 7.82254z m0 0M391.126986 850.049315c0.869171 4.345855-3.476684 8.691711-9.560882 9.560882-6.084198 0.869171-11.299224-1.738342-12.168395-6.084197-0.869171-4.345855 3.476684-8.691711 9.560881-9.560882 6.084198-0.869171 11.299224 1.738342 12.168396 6.084197z m0 0" fill="#191717" p-id="1141"></path></svg></a>
+            &nbsp;
+            <a href="https://weibo.com/u/5266337631" target="_blank"><svg t="1605197446554" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3700" width="28.5" height="28.5"s tyle="margin-top:12px"><path d="M834.168832 433.01888c13.328384 0 24.674304-10.022912 26.566656-23.099392 0.237568-0.9728 0.360448-1.828864 0.360448-2.926592 20.20352-184.64768-148.846592-152.866816-148.846592-152.866816-15.007744 0-27.019264 12.345344-27.019264 27.74016 0 15.147008 12.01152 27.488256 27.019264 27.488256 121.444352-27.246592 94.644224 96.17408 94.644224 96.17408-0.006144 15.271936 12.208128 27.490304 27.275264 27.490304z" fill="#2D333A" p-id="3701"></path><path d="M814.47936 110.739456c-58.468352-13.914112-118.562816-1.923072-135.399424 1.355776-1.294336 0.12288-2.525184 1.37216-3.723264 1.613824-0.57344 0.12288-0.929792 0.735232-0.929792 0.735232-16.631808 4.773888-28.760064 20.396032-28.760064 38.856704 0 21.999616 17.528832 40.091648 39.442432 40.091648 0 0 21.250048-2.895872 35.688448-8.63232 14.311424-5.863424 135.340032-4.364288 195.493888 98.275328 32.774144 74.9056 14.399488 125.038592 12.122112 133.093376 0 0-7.806976 19.464192-7.806976 38.627328 0 22.126592 17.528832 36.016128 39.262208 36.016128 18.184192 0 33.431552-2.514944 37.906432-33.757184h0.237568c64.579584-218.70592-78.96064-321.47456-183.533568-346.27584zM753.606656 501.215232c-39.049216-7.704576-20.047872-29.083648-20.047872-29.083648s38.207488-64.043008-7.569408-110.604288c-56.758272-57.665536-194.65216 7.337984-194.65216 7.337984-52.670464 16.613376-38.690816-7.581696-31.246336-48.756736 0-48.510976-16.355328-130.623488-156.649472-82.120704C203.298816 286.744576 82.939904 457.582592 82.939904 457.582592-0.743424 571.099136 10.36288 658.837504 10.36288 658.837504c20.8896 193.687552 223.348736 246.85568 380.811264 259.444736 165.654528 13.207552 389.265408-58.056704 457.04192-204.45184 67.805184-146.634752-55.40864-204.668928-94.609408-212.615168zM403.447808 863.664128c-164.491264 7.81312-297.424896-76.019712-297.424896-187.588608 0-111.691776 132.933632-201.254912 297.424896-208.959488 164.544512-7.704576 297.756672 61.216768 297.756672 172.67712 0.002048 111.556608-133.216256 216.274944-297.756672 223.870976z" fill="#2D333A" p-id="3702"></path><path d="M370.60608 540.684288c-165.382144 19.675136-146.290688 177.174528-146.290688 177.174528s-1.683456 49.872896 44.361728 75.27424c96.774144 53.291008 196.421632 21.02272 246.788096-45.062144 50.364416-66.125824 20.830208-226.934784-144.859136-207.386624zM328.886272 761.73312c-30.851072 3.680256-55.764992-14.411776-55.764992-40.68352 0-26.15296 22.120448-53.532672 53.006336-56.81152 35.479552-3.432448 58.591232 17.342464 58.591232 43.618304-0.004096 26.146816-25.032704 50.3296-55.832576 53.876736z m97.523712-84.432896c-10.479616 7.94624-23.32672 6.846464-28.848128-2.689024-5.76512-9.28768-3.600384-24.193024 6.967296-32.022528 12.238848-9.271296 24.999936-6.598656 30.52544 2.70336 5.55008 9.519104 1.591296 23.814144-8.644608 32.008192z" fill="#2D333A" p-id="3703"></path></svg></a>
+            <a href="https://www.zhihu.com/people/kang-zhi-qing-19" target="_blank"><svg t="1605197596199" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4673" width="27" height="27"><path d="M564.7 230.1V803h60l25.2 71.4L756.3 803h131.5V230.1H564.7z m247.7 497h-59.9l-75.1 50.4-17.8-50.4h-18V308.3h170.7v418.8zM526.1 486.9H393.3c2.1-44.9 4.3-104.3 6.6-172.9h130.9l-0.1-8.1c0-0.6-0.2-14.7-2.3-29.1-2.1-15-6.6-34.9-21-34.9H287.8c4.4-20.6 15.7-69.7 29.4-93.8l6.4-11.2-12.9-0.7c-0.8 0-19.6-0.9-41.4 10.6-35.7 19-51.7 56.4-58.7 84.4-18.4 73.1-44.6 123.9-55.7 145.6-3.3 6.4-5.3 10.2-6.2 12.8-1.8 4.9-0.8 9.8 2.8 13 10.5 9.5 38.2-2.9 38.5-3 0.6-0.3 1.3-0.6 2.2-1 13.9-6.3 55.1-25 69.8-84.5h56.7c0.7 32.2 3.1 138.4 2.9 172.9h-141l-2.1 1.5c-23.1 16.9-30.5 63.2-30.8 65.2l-1.4 9.2h167c-12.3 78.3-26.5 113.4-34 127.4-3.7 7-7.3 14-10.7 20.8-21.3 42.2-43.4 85.8-126.3 153.6-3.6 2.8-7 8-4.8 13.7 2.4 6.3 9.3 9.1 24.6 9.1 5.4 0 11.8-0.3 19.4-1 49.9-4.4 100.8-18 135.1-87.6 17-35.1 31.7-71.7 43.9-108.9L497 850l5-12c0.8-1.9 19-46.3 5.1-95.9l-0.5-1.8-108.1-123-22 16.6c6.4-26.1 10.6-49.9 12.5-71.1h158.7v-8c0-40.1-18.5-63.9-19.2-64.9l-2.4-3z" p-id="4674"></path></svg></a>
+
+        </h2>
+        <h2 class="site-description">
+        </h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+    </ol>
+</aside>
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://kangzhiqing.com" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+                <a href="/categories/tech/">Tech</a>
+            
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">2018年12月26日</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <p>感谢邱老师这一个学期的数据结构课的教导，让我了解到什么是数据结构和其重要性，以及相关的算法和实现。
+<br>这是一篇关于数据结构的复习。</p>
+<h3 id="基本概念">基本概念</h3>
+<p>1.程序 = 算法 + 数据结构   &mdash;&mdash; Nicklaus Wirth
+<br>一个程序就是通过具体的某种计算机语言将算法进行实现</p>
+<p>2.数据结构：相互之间存在一种或多种特定关系的数据元素的集合
+具体什么是数据结构，包含下面三个部分=&gt;</p>
+<ul>
+<li>
+<p>逻辑关系：线性关系、非线性关系</p>
+</li>
+<li>
+<p>存储方式：顺序存储、链接存储、散列存储
+<br>（存储存的除了要存数据，还要存它们之间的关系，这一点是邱老师在刚上数据结构讲这些基本概念的时候特别强调的，我印象挺深的）</p>
+</li>
+<li>
+<p>运算集合：查找和排序（插入=&gt;直接法，二分法、交换=&gt;冒泡排序，快速排序、选择=&gt;堆排序）</p>
+<p>3.算法：对特定问题求解步骤的一种描述。
+<br>一个算法还具有下列 5 个重要特性</p>
+</li>
+<li>
+<p>有穷性 一个算法必须在执行有穷步之后结束，但一个程序则可以无穷，比如说无限死循环</p>
+</li>
+<li>
+<p>确定性 算法的每一条指令必须有确切的含义</p>
+</li>
+<li>
+<p>可行性 一个算法是能行的</p>
+</li>
+<li>
+<p>输入 一个算法有零个或多个输入</p>
+</li>
+<li>
+<p>输出 一个算法有一个或多个输出</p>
+</li>
+</ul>
+<p><br>一个好的算法需要达到的目标</p>
+<ul>
+<li>
+<p>正确性</p>
+</li>
+<li>
+<p>可读性</p>
+</li>
+<li>
+<p>健壮性 当输入数据非法时，算法也能做出反应或进行处理，即要可以处理一些特殊和极端情况</p>
+</li>
+<li>
+<p>效率和低存储量需求 时间复杂度低，算法执行时间短。满足需求的同时尽可能使用低的存储量消耗</p>
+<p>4.时间复杂度： 算法中基本操作重复执行的次数是问题规模 n 的某个函数 f(n)，即
+T(n) = O(f(n))
+<br>5.空间复杂度： 算法所需存储空间的量度，即 S(n)=O(f(n))</p>
+</li>
+</ul>
+<h3 id="线性表">线性表</h3>
+<p>1.逻辑关系：线性关系/结构</p>
+<ul>
+<li>存在唯一一个被称作&quot;第一个&quot;的数据元素</li>
+<li>存在唯一一个被称作&quot;最后一个&quot;的数据元素</li>
+<li>除第一个之外，集合中每个数据元素均只有一个前驱</li>
+<li>除最后一个之外，集合中每个数据元素均只有一个后继</li>
+</ul>
+<p>总的来说就是只有第一个元素有直接后继，没有前驱，只有最后一个元素有直接前驱，没有后继，在这两个元素之间的元素既有一个直接前驱也有一个直接后继</p>
+<p><br>2.存储方式和运算
+<br>（1）顺序存储：用一组地址连续的存储单元依此存储线性表中的数据元素</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 在JavaScript中，数组就是一种隐式的存储关系
+</span><span class="c1"></span>
+<span class="c1">// 初始化数组
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">listInit</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="c1">// 插入=&gt;第i-1个位置和第i个位置之间插入元素,i从1开始
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">listInsert</span><span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">len</span> <span class="o">=</span> <span class="nx">list</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">||</span> <span class="nx">i</span> <span class="o">&gt;=</span> <span class="nx">len</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&#34;i的位置有误&#34;</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">j</span> <span class="o">=</span> <span class="nx">len</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&gt;=</span> <span class="nx">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">j</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">list</span><span class="p">[</span><span class="nx">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nx">list</span><span class="p">[</span><span class="nx">j</span><span class="p">];</span>
+  <span class="p">}</span>
+  <span class="nx">list</span><span class="p">[</span><span class="nx">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nx">data</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// 删除=&gt;删除第i个位置的元素
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">listDelete</span><span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">len</span> <span class="o">=</span> <span class="nx">list</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">||</span> <span class="nx">i</span> <span class="o">&gt;</span> <span class="nx">len</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&#34;i的位置有误&#34;</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">j</span> <span class="o">=</span> <span class="nx">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;=</span> <span class="nx">len</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">list</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="nx">list</span><span class="p">[</span><span class="nx">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
+  <span class="p">}</span>
+  <span class="c1">// 切记不能用len--，因为是原始值，len改变并不会改变list.length
+</span><span class="c1"></span>  <span class="nx">list</span><span class="p">.</span><span class="nx">length</span><span class="o">--</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p>（2）链式存储：用一组任意的存储单元存储线性表的数据元素（这组存储单元可以是连续的，也可以是不连续的）</p>
+<ul>
+<li>一个结点包含两个域，一个是数据域，一个是指针域，此链表的每个结点中只包含一个指针域，故又称为线性链表或单链表</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 单链表
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">LinkListNode</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="nx">data</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">headNode</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">LinkListNode</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">len</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="c1">// 获取第i个元素
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">getElem</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">headNode</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
+  <span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nx">p</span> <span class="o">&amp;&amp;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">p</span> <span class="o">=</span> <span class="nx">p</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
+    <span class="nx">j</span><span class="o">++</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">p</span> <span class="o">?</span> <span class="nx">p</span><span class="p">.</span><span class="nx">data</span> <span class="o">:</span> <span class="kc">null</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// 插入，在第i个位置之前插入元素e
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">linkListInsert</span><span class="p">(</span><span class="nx">LinkListNode</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">newNode</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">LinkListNode</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+  <span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="nx">p</span> <span class="o">=</span> <span class="nx">headNode</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">||</span> <span class="nx">i</span> <span class="o">&gt;</span> <span class="nx">len</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&#34;i的范围有误&#34;</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nx">j</span> <span class="o">&lt;=</span> <span class="nx">i</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">p</span><span class="p">.</span><span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">p</span> <span class="o">=</span> <span class="nx">p</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
+    <span class="nx">j</span><span class="o">++</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nx">newNode</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="nx">p</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
+  <span class="nx">p</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="nx">newNode</span><span class="p">;</span>
+  <span class="nx">len</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// 删除，删除第i个位置的结点
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">linkListDelete</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="nx">pre</span> <span class="o">=</span> <span class="nx">headNode</span><span class="p">;</span>
+  <span class="nx">p</span> <span class="o">=</span> <span class="nx">pre</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">i</span> <span class="o">&amp;&amp;</span> <span class="nx">p</span><span class="p">.</span><span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">pre</span> <span class="o">=</span> <span class="nx">p</span><span class="p">;</span>
+    <span class="nx">p</span> <span class="o">=</span> <span class="nx">pre</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
+    <span class="nx">j</span><span class="o">++</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">j</span> <span class="o">==</span> <span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&#34;超出链表范围&#34;</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="nx">pre</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="nx">p</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
+  <span class="nx">len</span><span class="o">--</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><ul>
+<li>双向链表：结点有两个指针域，其一指向直接后继，另一指向直接前驱</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 双链表
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">DuListNode</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="nx">prior</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="nx">data</span> <span class="o">||</span> <span class="kc">null</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">prior</span> <span class="o">=</span> <span class="nx">prior</span> <span class="o">||</span> <span class="kc">null</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="nx">next</span> <span class="o">||</span> <span class="kc">null</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">headNode</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DuListNode</span><span class="p">();</span>
+
+<span class="c1">// 获取第i个位置的结点（i从1开始）
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">getDuList</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">headNode</span><span class="p">;</span>
+  <span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nx">j</span> <span class="o">&lt;=</span> <span class="nx">i</span> <span class="o">&amp;&amp;</span> <span class="nx">p</span><span class="p">.</span><span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">p</span> <span class="o">=</span> <span class="nx">p</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
+    <span class="nx">j</span><span class="o">++</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">p</span><span class="p">.</span><span class="nx">data</span> <span class="o">?</span> <span class="nx">p</span><span class="p">.</span><span class="nx">data</span> <span class="o">:</span> <span class="kc">null</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// 获取表长
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">getDuListLen</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">headNode</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nx">p</span><span class="p">.</span><span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">p</span> <span class="o">=</span> <span class="nx">p</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
+    <span class="nx">j</span><span class="o">++</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">j</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// 在带头结点的双链表的第i个位置之前插入元素e
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">insertDuList</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">||</span> <span class="nx">i</span> <span class="o">&gt;</span> <span class="nx">getDuListLen</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span>
+      <span class="s2">&#34;i的范围应该不小于1且不大于表长加1,即len&gt;=1 &amp;&amp; len&lt;=&#34;</span> <span class="o">+</span>
+        <span class="p">(</span><span class="nx">getDuListLen</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+  <span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">headNode</span><span class="p">;</span>
+  <span class="kd">var</span> <span class="nx">newNode</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DuListNode</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nx">p</span><span class="p">.</span><span class="nx">next</span> <span class="o">&amp;&amp;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">p</span> <span class="o">=</span> <span class="nx">p</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
+    <span class="nx">j</span><span class="o">++</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">p</span><span class="p">.</span><span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">newNode</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="nx">p</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
+    <span class="nx">p</span><span class="p">.</span><span class="nx">next</span><span class="p">.</span><span class="nx">prior</span> <span class="o">=</span> <span class="nx">newNode</span><span class="p">;</span>
+    <span class="nx">p</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="nx">newNode</span><span class="p">;</span>
+    <span class="nx">newNode</span><span class="p">.</span><span class="nx">prior</span> <span class="o">=</span> <span class="nx">p</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">p</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="nx">newNode</span><span class="p">;</span>
+    <span class="nx">newNode</span><span class="p">.</span><span class="nx">prior</span> <span class="o">=</span> <span class="nx">p</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// 删除第i个位置的结点
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">delDuListNode</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">headNode</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">getDuList</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">while</span> <span class="p">(</span><span class="nx">j</span> <span class="o">&lt;=</span> <span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">p</span> <span class="o">=</span> <span class="nx">p</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
+      <span class="nx">j</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&#34;不存在第&#34;</span> <span class="o">+</span> <span class="nx">i</span> <span class="o">+</span> <span class="s2">&#34;个结点&#34;</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="nx">p</span><span class="p">.</span><span class="nx">prior</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="nx">p</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// 打印每个结点(包含头结点)
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">printDuList</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">p</span> <span class="o">=</span> <span class="nx">headNode</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nx">p</span> <span class="o">||</span> <span class="p">(</span><span class="nx">p</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">p</span><span class="p">.</span><span class="nx">prior</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">p</span><span class="p">.</span><span class="nx">next</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">p</span><span class="p">);</span>
+    <span class="nx">p</span> <span class="o">=</span> <span class="nx">p</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><ul>
+<li>循环链表：表中最后一个结点的指针域指向头结点，整个链表形成一个环，从表中任一结点出发均可找到表中其他结点
+<br>其操作和单链表和双链表的操作差不多，只不过算法的循环条件变成了 p.next 是否为头指针或者 p 是否为头指针</li>
+</ul>
+<h3 id="栈和队列">栈和队列</h3>
+<h4 id="栈">栈</h4>
+<p>1. 逻辑结构：运算受限的线性表（限定仅在表尾进行插入或删除操作的线性表）</p>
+<ul>
+<li>
+<p>FILO（First In Last Out）先进后出</p>
+</li>
+<li>
+<p>LIFO（Last In First Out）后进先出</p>
+</li>
+<li>
+<p>栈顶：表尾端</p>
+</li>
+<li>
+<p>栈底：表头端</p>
+<p>2. 存储和运算:</p>
+</li>
+</ul>
+<ul>
+<li>顺序栈</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 栈
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">Stack</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// 数据
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="c1">// 栈顶
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">top</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="c1">// 栈底
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">base</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="c1">// 入栈
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">entryStack</span> <span class="o">=</span> <span class="nx">entryStack</span><span class="p">;</span>
+  <span class="c1">// 出栈
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">exitStack</span> <span class="o">=</span> <span class="nx">exitStack</span><span class="p">;</span>
+  <span class="c1">// 返回栈顶元素
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">getTop</span> <span class="o">=</span> <span class="nx">getTop</span><span class="p">;</span>
+  <span class="c1">// 长度
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">length</span> <span class="o">=</span> <span class="nx">getLength</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">entryStack</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">top</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="nx">e</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">exitStack</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="o">--</span><span class="k">this</span><span class="p">.</span><span class="nx">top</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">getTop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="nx">top</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">getLength</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">top</span> <span class="o">-</span> <span class="k">this</span><span class="p">.</span><span class="nx">base</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// 利用栈进行数制转换
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Stack</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">n</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;请输入数字&#34;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;请输入要转换的进制&#34;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span> <span class="nx">d</span><span class="p">);</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">s</span><span class="p">.</span><span class="nx">entryStack</span><span class="p">(</span><span class="nx">n</span> <span class="o">%</span> <span class="nx">d</span><span class="p">);</span>
+  <span class="nx">n</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">n</span> <span class="o">/</span> <span class="nx">d</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">length</span><span class="p">())</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">exitStack</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="c1">// 利用栈计算一个数的阶乘
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Stack</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">n</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;请输入你要计算的数：&#34;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">s</span><span class="p">.</span><span class="nx">entryStack</span><span class="p">(</span><span class="nx">n</span><span class="o">--</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">length</span><span class="p">())</span> <span class="p">{</span>
+  <span class="nx">result</span> <span class="o">*=</span> <span class="nx">s</span><span class="p">.</span><span class="nx">exitStack</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+</code></pre></div><ul>
+<li>链栈</li>
+</ul>
+<p><br>栈的链式表示
+<img src="/linkStack.png" style="height:60%"></p>
+<h4 id="队列">队列</h4>
+<p>1.逻辑结构</p>
+<ul>
+<li>
+<p>FIFO（first in first out）</p>
+</li>
+<li>
+<p>LILO（last in last out）</p>
+</li>
+<li>
+<p>一端进行插入，另一端删除元素</p>
+</li>
+<li>
+<p>允许插入的一端叫做队尾（rear）</p>
+</li>
+<li>
+<p>允许删除的一端叫做队头 （front）</p>
+<p>2.存储和运算</p>
+</li>
+</ul>
+<p>（1） 顺序存储</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 队列
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">Queue</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// 数据
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="c1">// 队头
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">front</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="c1">// 队尾
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">rear</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="c1">// 获取队头
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">getFront</span> <span class="o">=</span> <span class="nx">getFront</span><span class="p">;</span>
+  <span class="c1">// 获取队尾元素
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">getRear</span> <span class="o">=</span> <span class="nx">getRear</span><span class="p">;</span>
+  <span class="c1">// 入队
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">entryQueue</span> <span class="o">=</span> <span class="nx">entryQueue</span><span class="p">;</span>
+  <span class="c1">// 出队
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">exitQueue</span> <span class="o">=</span> <span class="nx">exitQueue</span><span class="p">;</span>
+  <span class="c1">// 获取队列长度
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">length</span> <span class="o">=</span> <span class="nx">getLength</span><span class="p">;</span>
+  <span class="c1">// 队列是否为空
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">isQueueEmpty</span> <span class="o">=</span> <span class="nx">isQueueEmpty</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">getFront</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">front</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">getRear</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">rear</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">entryQueue</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">rear</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="nx">e</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">exitQueue</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">front</span><span class="o">++</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">getLength</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">rear</span> <span class="o">-</span> <span class="k">this</span><span class="p">.</span><span class="nx">front</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">isQueueEmpty</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">front</span> <span class="o">==</span> <span class="k">this</span><span class="p">.</span><span class="nx">rear</span> <span class="o">?</span> <span class="kc">true</span> <span class="o">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p>（2） 链式存储</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 单链队列（不引入头结点）
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">linkQueue</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">front</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">rear</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">length</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">linkQueue</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">qNode</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="nx">e</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">// 判断队是否为空
+</span><span class="c1"></span><span class="nx">linkQueue</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">isQueueEmpty</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">front</span> <span class="o">==</span> <span class="k">this</span><span class="p">.</span><span class="nx">rear</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="p">.</span><span class="nx">front</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">?</span> <span class="kc">true</span> <span class="o">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">// 入队
+</span><span class="c1"></span><span class="nx">linkQueue</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">entryQueue</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">newNode</span> <span class="o">=</span> <span class="k">new</span> <span class="k">this</span><span class="p">.</span><span class="nx">qNode</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">front</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">rear</span> <span class="o">=</span> <span class="nx">newNode</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">rear</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="nx">newNode</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">rear</span> <span class="o">=</span> <span class="nx">newNode</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">length</span><span class="o">++</span><span class="p">;</span>
+  <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">// 出队
+</span><span class="c1"></span><span class="nx">linkQueue</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">exitQueue</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">isQueueEmpty</span><span class="p">())</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">front</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">front</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">front</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
+    <span class="c1">// 当队列最后一个元素出队后，队列的尾指针也丢失，则需要从新复制
+</span><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">rear</span> <span class="o">==</span> <span class="nx">p</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">rear</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">front</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">length</span><span class="o">--</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nx">p</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&#34;当前队列为空&#34;</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="c1">// 打印当前队列
+</span><span class="c1"></span><span class="nx">linkQueue</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">printQueue</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+  <span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">front</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nx">p</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">str</span> <span class="o">+=</span> <span class="nx">p</span><span class="p">.</span><span class="nx">data</span> <span class="o">+</span> <span class="s2">&#34; &#34;</span><span class="p">;</span>
+    <span class="nx">p</span> <span class="o">=</span> <span class="nx">p</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;当前队列为：&#34;</span> <span class="o">+</span> <span class="nx">str</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div><p>（3）循环存储
+设顺序存储队列用一维数组 q[m]表示，其中 m 为队列中元素个数，队列中元素在向量中的下标从 0 到 m-1。
+<br>
+在出队的时候，front 头指针向右移动，如果队尾指针指向 m-1，队列中仍有空闲单元，所以队列不是真的满了，
+这时候入队操作，就会出现假溢现象。为了避免多余的空闲单元浪费（假溢出现），则引入循环队列，仅仅用 front==rear 无法判断队列空间是空还是满，有两种处理方法，一种是另外设置一个标志位来区别队空和队满的区别，另一种是少用一个元素空间，约定以“头指针在队尾指针的下一位置上”作为队列呈“满”状态的标志，这里是第二种</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 循环队列
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">CQueue</span><span class="p">(</span><span class="nx">maxLength</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">maxLength</span> <span class="o">=</span> <span class="nx">maxLength</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">maxLength</span><span class="p">);</span>
+  <span class="c1">// 初始化的时候头指针和尾指针都为0，每入队，rear指针加一，指向下一个位置
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">front</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">rear</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">length</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="c1">// 获取队列长度
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">getLength</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">rear</span> <span class="o">-</span> <span class="k">this</span><span class="p">.</span><span class="nx">front</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">maxLength</span><span class="p">)</span> <span class="o">%</span> <span class="k">this</span><span class="p">.</span><span class="nx">maxLength</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="c1">// 入队
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">entryQueue</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">((</span><span class="k">this</span><span class="p">.</span><span class="nx">rear</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="k">this</span><span class="p">.</span><span class="nx">maxLength</span> <span class="o">==</span> <span class="k">this</span><span class="p">.</span><span class="nx">front</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&#34;队列已满&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">rear</span><span class="p">]</span> <span class="o">=</span> <span class="nx">e</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">rear</span> <span class="o">=</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">rear</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="k">this</span><span class="p">.</span><span class="nx">maxLength</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">length</span><span class="o">++</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="c1">// 出队
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">exitQueue</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">front</span> <span class="o">==</span> <span class="k">this</span><span class="p">.</span><span class="nx">rear</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&#34;队列为空&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">front</span><span class="p">];</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">front</span> <span class="o">=</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">front</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="k">this</span><span class="p">.</span><span class="nx">maxLength</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nx">p</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="c1">// 打印当前队列元素
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">printQueue</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">front</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="nx">p</span> <span class="o">%</span> <span class="k">this</span><span class="p">.</span><span class="nx">maxLength</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">rear</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">str</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="nx">p</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&#34; &#34;</span><span class="p">;</span>
+      <span class="nx">p</span> <span class="o">=</span> <span class="p">(</span><span class="nx">p</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="k">this</span><span class="p">.</span><span class="nx">maxLength</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="树和二叉树">树和二叉树</h3>
+<p>1.逻辑结构：</p>
+<ul>
+<li>
+<p>树：n（n &gt; 0）个节点的有限集</p>
+</li>
+<li>
+<p>二叉数：每个结点的度最多为二（最多有两个子树）</p>
+<p>2.存储和运算（二叉树）</p>
+</li>
+<li>
+<p>顺序存储：用一组地址连续的存储单元依次自上而下，自左向右存储完全二叉数的结点元素，以‘0’表示不存在此结点。</p>
+</li>
+<li>
+<p>链式存储</p>
+</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 创建二叉树（这里实现二叉排序树）
+</span><span class="c1">// 二叉排序树（Binary Sort Tree）BST：左子树上结点的值小于ta的根结点的值，而右子树上结点的值大于ta的根结点的值，没有键值相等的节点
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">BinaryTree</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// 根节点
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">root</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+
+  <span class="c1">// 节点
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">Node</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="nx">data</span><span class="p">;</span>
+    <span class="c1">// 左指针
+</span><span class="c1"></span>    <span class="k">this</span><span class="p">.</span><span class="nx">left</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="c1">// 右指针
+</span><span class="c1"></span>    <span class="k">this</span><span class="p">.</span><span class="nx">right</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="c1">// 插入
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">insert</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">newNode</span> <span class="o">=</span> <span class="k">new</span> <span class="k">this</span><span class="p">.</span><span class="nx">Node</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">root</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">root</span> <span class="o">=</span> <span class="nx">newNode</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">insertNode</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">root</span><span class="p">,</span> <span class="nx">newNode</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">insertNode</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">root</span><span class="p">,</span> <span class="nx">newNode</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">newNode</span><span class="p">.</span><span class="nx">data</span> <span class="o">&lt;</span> <span class="nx">root</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">left</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">root</span><span class="p">.</span><span class="nx">left</span> <span class="o">=</span> <span class="nx">newNode</span><span class="p">;</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">insertNode</span><span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">left</span><span class="p">,</span> <span class="nx">newNode</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">right</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">root</span><span class="p">.</span><span class="nx">right</span> <span class="o">=</span> <span class="nx">newNode</span><span class="p">;</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">insertNode</span><span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">right</span><span class="p">,</span> <span class="nx">newNode</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+
+  <span class="c1">// 先序遍历
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">preOrderTraversal</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">preOrderTraversalNode</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">root</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+  <span class="p">};</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">preOrderTraversalNode</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">node</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">node</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">callback</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">preOrderTraversalNode</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">left</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">preOrderTraversalNode</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">right</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+
+  <span class="c1">// 中序遍历（中序遍历二叉排序树得到的就是按从小到大的顺序访问所有节点）
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">inOrderTraversal</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">inOrderTraversalNode</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">root</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+  <span class="p">};</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">inOrderTraversalNode</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">node</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">node</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">inOrderTraversalNode</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">left</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+      <span class="nx">callback</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">inOrderTraversalNode</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">right</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+
+  <span class="c1">// 后序遍历
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">postOrderTraversal</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">postOrderTraversalNode</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">root</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+  <span class="p">};</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">postOrderTraversalNode</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">node</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">node</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">postOrderTraversalNode</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">left</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">postOrderTraversalNode</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">right</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+      <span class="nx">callback</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">printNode</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+  <span class="p">};</span>
+
+  <span class="c1">// 获取BST中的最小值
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">minData</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="kd">let</span> <span class="nx">p</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">root</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="nx">p</span> <span class="o">&amp;&amp;</span> <span class="nx">p</span><span class="p">.</span><span class="nx">left</span><span class="p">){</span>
+      <span class="nx">p</span> <span class="o">=</span> <span class="nx">p</span><span class="p">.</span><span class="nx">left</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">p</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="c1">// 获取BST中的最大值
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">maxData</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="kd">let</span> <span class="nx">p</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">root</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="nx">p</span> <span class="o">&amp;&amp;</span> <span class="nx">p</span><span class="p">.</span><span class="nx">right</span><span class="p">){</span>
+      <span class="nx">p</span> <span class="o">=</span> <span class="nx">p</span><span class="p">.</span><span class="nx">right</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">p</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="c1">// 查询一个节点
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">findNode</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span><span class="nx">node</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">root</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">node</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">){</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">key</span> <span class="o">&lt;</span> <span class="nx">node</span><span class="p">.</span><span class="nx">key</span><span class="p">){</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">findNode</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span><span class="nx">node</span><span class="p">.</span><span class="nx">left</span><span class="p">);</span>
+      <span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">key</span> <span class="o">&gt;</span> <span class="nx">node</span><span class="p">.</span><span class="nx">key</span><span class="p">){</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">findNode</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">node</span><span class="p">.</span><span class="nx">right</span><span class="p">);</span>
+      <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+        <span class="k">return</span> <span class="nx">node</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+      <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="c1">// 移除一个节点
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">removeNode</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">key</span><span class="p">){</span>
+    <span class="kd">let</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">root</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="nx">p</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">node</span><span class="o">==</span><span class="kc">null</span><span class="p">){</span>
+      <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="p">}</span>
+
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><p>3.二叉树的性质</p>
+<ul>
+<li>在二叉数的第 i 层上至多有 2^(i-1)个结点（i&gt;=1）</li>
+<li>深度（树中结点 最大的层次）为 k 的二叉树至多有 2^k-1 个结点
+<br>2^0+2^1+&hellip;+2^k-1 = 2^0(1-2^k)/1-2 = 2^k - 1</li>
+<li>对任何一颗二叉数 T，如果度为 0 的结点树为 n0，度为 2 的结点数为 n2，则 n2 = n0 + 1</li>
+<li>满二叉树：一颗深度为 k 且有 2^k-1 个结点的二叉数称为满二叉树</li>
+<li>完全二叉树：深度为 k，有 n 个结点的二叉树，当且仅当其每一个结点都与深度为 k 的满二叉树中编号从 1 至 n 的结点一一对应</li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/datastructure/">dataStructure</a>
+        
+            <a href="/tags/structure/">structure</a>
+        
+    </section>
+
+
+    </footer>
+
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+    integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
+    integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4"
+    crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+    integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.querySelector(`.article-content`));"></script>
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">相关文章</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/post/three.js/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Three.js</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/post/cssdemo/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">CSSDemo</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/post/jsalg/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">JsAlg</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/post/svg/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SVG</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/post/reswebdesign/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">ResWebDesign</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">&copy; 2020 KiWaTo
+        &nbsp;<a href="https://beian.miit.gov.cn" target="_blank">赣ICP备18016687号</a>
+    </section>
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="1.1.0">Stack</a></b> designed by
+        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true" style="display:none">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+            </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"
+    integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin="anonymous"></script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<link rel="stylesheet" href="/css/highlight/light.min.css" media="(prefers-color-scheme: light)">
+<link rel="stylesheet" href="/css/highlight/dark.min.css" media="(prefers-color-scheme: dark)">
+
+    </body>
+</html>

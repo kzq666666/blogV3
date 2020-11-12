@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>轮子库 on KiWaTo</title>
+    <link>https://kangzhiqing.com/tags/%E8%BD%AE%E5%AD%90%E5%BA%93/</link>
+    <description>Recent content in 轮子库 on KiWaTo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 Dec 2018 21:47:47 +0800</lastBuildDate><atom:link href="https://kangzhiqing.com/tags/%E8%BD%AE%E5%AD%90%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Element Ui</title>
+      <link>https://kangzhiqing.com/post/element-ui/</link>
+      <pubDate>Tue, 04 Dec 2018 21:47:47 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/element-ui/</guid>
+      <description>之所以用别人造好的轮子，就是觉得自己的设计水平很差，脑子也没有很多的样式储备，写出来的样式有点丑，于是乎就想用一用类似BootStrap、uiket等轮子库，借鉴一下。这里就先学习了一下element-ui，，看！别人的轮子又大圆~
+基本介绍 Element，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库 现在是vue3.0，估计一段时间之后就会变成3.0了，相应的改动也会更新
+Vue-cli@3.0使用element-ui 作为一个插件添加到vue-cli中
+vue create el cd el vue add element 安装element插件过程中会有交互，是全部导入，还是按需求导入，我是选择按需求导入，这样比较方便，也比较轻。 成功之后就可以看到你的vue-cli初始页面就会有一个element-button
+element.js import Vue from &amp;#39;vue&amp;#39; import { Button } from &amp;#39;element-ui&amp;#39; import &amp;#39;element-ui/lib/theme-chalk/index.css&amp;#39; Vue.use(Button) tip：一定要导入对应你需要的css样式，这样才有用,index.css是theme-chalk下所有的css入口文件，如果只想单独使用某个css，找到那个css导入就好了选择你需要的轮子 官网有很详细的介绍和样式预览，选择需要的，然后使用就好了，对于很好的样式可以看一看具体css怎么实现的，增加一些自己写css的能力
+FAQ  vue使用element-ui的el-input监听不了回车事件解决 在后面加个native @keydown.enter.native  </description>
+    </item>
+    
+  </channel>
+</rss>

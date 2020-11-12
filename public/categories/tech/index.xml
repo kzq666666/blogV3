@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tech on KiWaTo</title>
+    <link>https://kangzhiqing.com/categories/tech/</link>
+    <description>Recent content in Tech on KiWaTo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 16 Apr 2020 23:43:52 +0800</lastBuildDate><atom:link href="https://kangzhiqing.com/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Three.js</title>
+      <link>https://kangzhiqing.com/post/three.js/</link>
+      <pubDate>Thu, 16 Apr 2020 23:43:52 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/three.js/</guid>
+      <description>1.scene 场景 scene就是一个可以放置物体、灯光的3D空间，和现实中的一个空间相似，可大可小
+//创建一个场景 var scene = new THREE.Scene(); 2.camera 相机 camera决定看一个物体的方式和位置，和现实中的相机行为相似，有很多种类的相机。
+ PerspectiveCamera 透视相机  // 透视相机更加接近于现实中我们看物体的视角，远小近大 // 创建一个透视相机 var camera = new THREE.PerspectiveCamera(fov可视角度,aspect纵横比,near近端距离,far远端距离) // 设置camera的位置 camera.set(x,y,z) --3.渲染器  WebGLRenderer  var renderer = new THREE.WebGLRenderer() 4.几何形状  立方体(CubeGeometry)  CubeGeometry(width, height, depth, widthSegments, heightSegments, depthSegments) // width,height,depth是分别在x,y,z方向上的长度,后面三个参数是对应的分段数,如果不需要分段可以不设置。几何中心在原点  平面(PlaneGeometry)  长方形平面,并非是无限延伸的平面
+PlaneGeometry(width, height, widthSegments, heightSegments) // width,height分别是x,y方向上的长度,后面两个参数是对应的分段数  球体(SphereGeometry)  SphereGeometry(radius, segmentsWidth, segmentHeight, phiStart, phiLength, thetaStart, thetaLength) // radius:半径,segmentWidth:纬度上切片数,segmentHeight:经度上的切片数,phiStart:经度开始的弧度,phiLength:经度跨过的弧度,thetaStart:纬度开始的弧度,thetaLength:纬度跨过的弧度  文字形状  使用额外的文字形状需要下载和引用额外的字体库,下载对应的json文件放在目录下,用下面的方法引用 传送门:https://github.</description>
+    </item>
+    
+    <item>
+      <title>CSSDemo</title>
+      <link>https://kangzhiqing.com/post/cssdemo/</link>
+      <pubDate>Thu, 23 May 2019 16:11:03 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/cssdemo/</guid>
+      <description>水波效果 .waterWaves{position: relative;width: 200px;height: 200px;border: 1px solid #999;border-radius: 50%;text-align: center;line-height: 100px;margin: 100px auto;animation: wave linear infinite;overflow:hidden;}.wave1{position: absolute;width: 200%;height: 200%;background:skyblue;opacity: 0.4;left: -50%;top: 50%;border-radius: 180px;animation: inherit;animation-duration: 7s;}.wave2{position: absolute;width: 200%;height: 200%;background:skyblue;opacity: 0.6;left: -30%;top: 60%;border-radius: 45%;animation: inherit;animation-duration: 10s;}.</description>
+    </item>
+    
+    <item>
+      <title>JsAlg</title>
+      <link>https://kangzhiqing.com/post/jsalg/</link>
+      <pubDate>Sat, 27 Apr 2019 09:25:17 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/jsalg/</guid>
+      <description>数组去重 function noRepeat(arr){ return arr.filter((ele,index)=&amp;gt;{ return arr.indexOf(ele) == index; }) } </description>
+    </item>
+    
+    <item>
+      <title>SVG</title>
+      <link>https://kangzhiqing.com/post/svg/</link>
+      <pubDate>Thu, 11 Apr 2019 15:38:47 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/svg/</guid>
+      <description>SVG(Scalable Vector Graphics 可伸缩矢量图) 历史 2001年推出第一版，一直在发展，但直到高分辨率设备出现才得到广泛的关注和使用
+定义 SVG是XML中用于描述二维图形的语言，SVG支持三种图形对象矢量图形形状、图像、文本
+代码实例 五角星 Star 1Created with Sketch.&amp;lt;!-- 0 0 198 198 min-x min-y 宽度 高度 --&amp;gt; &amp;lt;svg width=&amp;#34;198px&amp;#34; height=&amp;#34;188px&amp;#34; viewBox=&amp;#34;0 0 198 188&amp;#34; version=&amp;#34;1.1&amp;#34; xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34; xmlns:xlink=&amp;#34;http://www.w3.org/1999/xlink&amp;#34; xmlns:sketch=&amp;#34;http://www.bohemiancoding.com/sketch/ns&amp;#34;&amp;gt; &amp;lt;!--title和desc是在图片没有加载出来时候的展现出来的信息 --&amp;gt; &amp;lt;title&amp;gt;Star 1&amp;lt;/title&amp;gt; &amp;lt;desc&amp;gt;Created with Sketch.&amp;lt;/desc&amp;gt; &amp;lt;!--defs用于存储所有可以复用的元素定义的地方，如梯度、符号、路径--&amp;gt; &amp;lt;defs&amp;gt;&amp;lt;/defs&amp;gt; &amp;lt;!--g标签是group的缩写，可以把其他元素捆绑在一起使用--&amp;gt; &amp;lt;g id=&amp;#34;Page-1&amp;#34; stroke=&amp;#34;none&amp;#34; stroke-width=&amp;#34;1&amp;#34; fill=&amp;#34;none&amp;#34; fill-rule=&amp;#34;evenodd&amp;#34; sketch:type=&amp;#34;MSPage&amp;#34;&amp;gt; &amp;lt;!--多边形节点（polygon），内置还有path、rect、circle、ellipse、--&amp;gt; &amp;lt;polygon id=&amp;#34;Star-1&amp;#34; stroke=&amp;#34;#979797&amp;#34; stroke-width=&amp;#34;3&amp;#34; fill=&amp;#34;#F8E81C&amp;#34; sketch:type=&amp;#34;MSShapeGroup&amp;#34; points=&amp;#34;99 154 40.2214748 184.901699 51.4471742 119.45085 3.</description>
+    </item>
+    
+    <item>
+      <title>ResWebDesign</title>
+      <link>https://kangzhiqing.com/post/reswebdesign/</link>
+      <pubDate>Tue, 02 Apr 2019 16:26:09 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/reswebdesign/</guid>
+      <description>媒体查询 meta标签 针对视口的标签，告诉浏览器该如何渲染当前页面，是网页和移动浏览器的接口
+&amp;lt;!-- viewport:视口 width为设备宽度 初始化页面大小为实际大小的1.0倍 禁止用户缩放 --&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width,initial-scale=1.0,user-scalable=no&amp;#34;/&amp;gt; 弹性布局与响应式图片 Flexbox  方向  flex-direction  row:水平方向（起点是最左端） row-reverse:水平反方向（起点是最右端） column:垂直方向（起点是最上方） column-reverse:垂直反方向（起点是最下方）     主轴和交叉轴  FlexBox方向是row，主轴就是横轴，交叉轴就是与之垂直的纵轴 FlexBox方向是column，主轴就是纵轴，交叉轴就是横轴   对齐  align-item:交叉轴对齐方式  flex-start:从flexbox父元素起始边对齐 flex-end:从flexbox父元素末尾对齐 center:从flexbox父元素居中对齐 baseline:沿基线对齐 stretch:所有项拉伸至父元素一样大（默认）   slign-self:单个元素的对齐方式 justify-content:主轴对齐方式  flex-start(默认) flex-end center space-between:每个子元素的之间空白间距一样 space-around:每个子元素的两端空白间距都一样     flex(flex-grow flex-shrink flex-basis)  flex-grow:相对于其他的项目的放大/伸张比例 flex-shrink:相对于其他的项目的缩小/收缩比例 flex-basis:项目占据的主轴空间，默认是auto   弹性  </description>
+    </item>
+    
+    <item>
+      <title>Webpack</title>
+      <link>https://kangzhiqing.com/post/webpack/</link>
+      <pubDate>Fri, 15 Feb 2019 14:29:05 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/webpack/</guid>
+      <description>官网 文档
+Entry Webpack的入口，通过入口文件，webpack开始搭建内部依赖网
+// webpack.config.js module.exports = { entry: &amp;#39;./path/to/my/entry/file.js&amp;#39; }; Output 输出配置
+module.exports = { output: { filename: &amp;#39;bundle.js&amp;#39;, } }; Mode 主要是两种环境，开发环境（development）和生产环境（production），相应的环境，webpack会做出具体的优化方案。 （default：production）
+module.exports = { mode: &amp;#39;production&amp;#39; // &amp;#39;development&amp;#39; } Loaders 加载器，用于加载资源，如scss文件或者将一些拓展语言（TypeScript,Scss）转换成合适的格式。 webpack内置可以处理的文件类型：JSON
+module.exports = { module: { rules: [ { test: /\.css$/, use: &amp;#39;css-loader&amp;#39; }, { test: /\.ts$/, use: &amp;#39;ts-loader&amp;#39; } ] } };  css-loader =&amp;gt; 处理.css文件 style-loader =&amp;gt; 通过&amp;lt;style&amp;gt;标签将css-loader内部样式注入到html中 Less-loader Sass-loader post-css-loader  Plugins 插件，webpack的支柱，webpack本身就是建立在类似的插件系统上的。</description>
+    </item>
+    
+    <item>
+      <title>ECharts</title>
+      <link>https://kangzhiqing.com/post/echarts/</link>
+      <pubDate>Thu, 14 Feb 2019 09:42:36 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/echarts/</guid>
+      <description>官网 教程 API
+
+
+
+
+ --echarts.init(document.getElementById(&#39;bar&#39;)).setOption({title:{text:&#39;柱状图&#39;},tooltip:{},legend:{data:[&#39;销量&#39;]},xAxis:{data:[&#34;衬衫&#34;,&#34;羊毛衫&#34;,&#34;雪纺衫&#34;,&#34;裤子&#34;,&#34;高跟鞋&#34;,&#34;袜子&#34;]},yAxis:{},series: [{type: &#39;bar&#39;,name: &#39;销量&#39;,data: [5, 20, 36, 10, 10, 20]}]});echarts.init(document.getElementById(&#39;pie&#39;)).setOption({title:{text:&#39;饼状图&#39;},series: {name: &#39;访问来源&#39;,type: &#39;pie&#39;,radius:&#39;60%&#39;,data: [{value:235, name:&#39;视频广告&#39;},{value:274, name:&#39;联盟广告&#39;},{value:310, name:&#39;邮件营销&#39;},{value:335, name:&#39;直接访问&#39;},{value:400, name:&#39;搜索引擎&#39;}]}});echarts.init(document.getElementById(&#39;line&#39;)).setOption({title: {text: &#39;直线图&#39;},tooltip: {},toolbox: {// feature: {// dataView: {},// saveAsImage: {// pixelRatio: 2// },// restore: {}// }},xAxis: {},yAxis: {},series: [{type: &#39;line&#39;,smooth: true,data: [[12, 5], [24, 20], [36, 36], [48, 10], [60, 10], [72, 20]]}]});// 柱状图 echarts.</description>
+    </item>
+    
+    <item>
+      <title>RegExp</title>
+      <link>https://kangzhiqing.com/post/regexp/</link>
+      <pubDate>Wed, 23 Jan 2019 17:51:53 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/regexp/</guid>
+      <description>Regular Expression
+正则表达式：匹配特殊字符或有特殊搭配原则的字符的最佳选择 创建方式  直接量 new RegExp();  // 直接量 var reg = /abc/ ; // new RegExp(); var reg = new RegExp(pattern. attribute); var reg = new RegExp(&amp;#34;abc&amp;#34;,&amp;#34;i&amp;#34;) var reg = new RegExp(/abc/i); 修饰符 /i ignoreCase 忽视大小写 /g global 全局匹配 /m multiline 多行匹配
+常用方法 str.match(reg) // 返回匹配成功的结果数组 str.search(reg) // 返回匹配到的位置，匹配不到返回-1 str.split(reg) str.replace(reg, newStr/function(){}) reg.test(str) // 匹配返回true，不匹配则返回false reg.exec() // 常用规则 \w ==&amp;gt; [0-9A-z_] \W ==&amp;gt; [^\w] \d ==&amp;gt; [0-9] \D ==&amp;gt; [^\d] \s ==&amp;gt; [\n\f\r\t\v] 空白字符 \S ==&amp;gt; [^\s] \b ==&amp;gt; 单词边界 /\bc/ 以c开头的单词 \B ==&amp;gt; 非单词边界 .</description>
+    </item>
+    
+    <item>
+      <title>ES6</title>
+      <link>https://kangzhiqing.com/post/es6/</link>
+      <pubDate>Fri, 04 Jan 2019 11:03:38 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/es6/</guid>
+      <description>let 和 const ES6 新加了两种声明变量的方式，一个是 let，一个是 const。
+ let 和 const 声明变量有自己的块级作用域（在 for 循环中用 let 声明的变量不会泄露到外部） let 和 const 声明变量在预编译的过程都不会进行变量提升 let 和 const 声明的变量不能再次声明，而 const 声明变量的时候必须同时赋值，并且不能再次赋值  { console.log(a); // ReferenceError:a is not undefined  let a; } { let a = 1; let a = 2; // SyntaxError: Identifier &amp;#39;a&amp;#39; has already been declared } { const a; // SyntaxError:Missing initializer in const declaration } { const a = 1; a = 2 // TypeError:Assignment to constant variable } 模板字面量  创建字符串不必再拼接了~  let a = { str: &amp;#34;模板字面量&amp;#34; }; console.</description>
+    </item>
+    
+    <item>
+      <title>数据结构</title>
+      <link>https://kangzhiqing.com/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Wed, 26 Dec 2018 09:20:11 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+      <description>感谢邱老师这一个学期的数据结构课的教导，让我了解到什么是数据结构和其重要性，以及相关的算法和实现。 这是一篇关于数据结构的复习。
+基本概念 1.程序 = 算法 + 数据结构 &amp;mdash;&amp;mdash; Nicklaus Wirth 一个程序就是通过具体的某种计算机语言将算法进行实现
+2.数据结构：相互之间存在一种或多种特定关系的数据元素的集合 具体什么是数据结构，包含下面三个部分=&amp;gt;
+  逻辑关系：线性关系、非线性关系
+  存储方式：顺序存储、链接存储、散列存储 （存储存的除了要存数据，还要存它们之间的关系，这一点是邱老师在刚上数据结构讲这些基本概念的时候特别强调的，我印象挺深的）
+  运算集合：查找和排序（插入=&amp;gt;直接法，二分法、交换=&amp;gt;冒泡排序，快速排序、选择=&amp;gt;堆排序）
+3.算法：对特定问题求解步骤的一种描述。 一个算法还具有下列 5 个重要特性
+  有穷性 一个算法必须在执行有穷步之后结束，但一个程序则可以无穷，比如说无限死循环
+  确定性 算法的每一条指令必须有确切的含义
+  可行性 一个算法是能行的
+  输入 一个算法有零个或多个输入
+  输出 一个算法有一个或多个输出
+  
+一个好的算法需要达到的目标
+  正确性
+  可读性
+  健壮性 当输入数据非法时，算法也能做出反应或进行处理，即要可以处理一些特殊和极端情况
+  效率和低存储量需求 时间复杂度低，算法执行时间短。满足需求的同时尽可能使用低的存储量消耗
+4.时间复杂度： 算法中基本操作重复执行的次数是问题规模 n 的某个函数 f(n)，即 T(n) = O(f(n)) 5.</description>
+    </item>
+    
+    <item>
+      <title>Mongodb</title>
+      <link>https://kangzhiqing.com/post/mongodb/</link>
+      <pubDate>Tue, 11 Dec 2018 16:06:49 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/mongodb/</guid>
+      <description>在学习node的时候，进行连接数据库相关操作，于是就学习了一下mongodb非关系型数据库。 mongodb操作的都是对象
+基本命令汇总 show dbs 显示所有的数据库 show tables 显示当前数据库下的所有表 db 显示当前数据库 use mydb 切换到mydb数据库，如果没有则创建mydb数据库 db.stu.insert({}) 向stu表中插入数据，如果没有stu则创建一个stu表 db.stu.find() 显示stu表下的所有数据 db.stu.find({条件1},{条件2}) 查找满足条件1且条件2的数据 db.stu.find({$or:[{条件1},{条件2}]}) 查找满足条件1或条件2的数据 db.stu.find({age:{$gte:10,$lte:20}}) 查询stu表中age大于等于10并且小于等于20的数据 </description>
+    </item>
+    
+    <item>
+      <title>Element Ui</title>
+      <link>https://kangzhiqing.com/post/element-ui/</link>
+      <pubDate>Tue, 04 Dec 2018 21:47:47 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/element-ui/</guid>
+      <description>之所以用别人造好的轮子，就是觉得自己的设计水平很差，脑子也没有很多的样式储备，写出来的样式有点丑，于是乎就想用一用类似BootStrap、uiket等轮子库，借鉴一下。这里就先学习了一下element-ui，，看！别人的轮子又大圆~
+基本介绍 Element，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库 现在是vue3.0，估计一段时间之后就会变成3.0了，相应的改动也会更新
+Vue-cli@3.0使用element-ui 作为一个插件添加到vue-cli中
+vue create el cd el vue add element 安装element插件过程中会有交互，是全部导入，还是按需求导入，我是选择按需求导入，这样比较方便，也比较轻。 成功之后就可以看到你的vue-cli初始页面就会有一个element-button
+element.js import Vue from &amp;#39;vue&amp;#39; import { Button } from &amp;#39;element-ui&amp;#39; import &amp;#39;element-ui/lib/theme-chalk/index.css&amp;#39; Vue.use(Button) tip：一定要导入对应你需要的css样式，这样才有用,index.css是theme-chalk下所有的css入口文件，如果只想单独使用某个css，找到那个css导入就好了选择你需要的轮子 官网有很详细的介绍和样式预览，选择需要的，然后使用就好了，对于很好的样式可以看一看具体css怎么实现的，增加一些自己写css的能力
+FAQ  vue使用element-ui的el-input监听不了回车事件解决 在后面加个native @keydown.enter.native  </description>
+    </item>
+    
+    <item>
+      <title>Vue</title>
+      <link>https://kangzhiqing.com/post/vue/</link>
+      <pubDate>Tue, 04 Dec 2018 18:21:14 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/vue/</guid>
+      <description>坑 在使用axios拦截器的时候，在vue-router的钩子函数created是不会触发的
+scroll 在写websocket网页版聊天时，有个需求时每次发消息，scroll都要定位在最下面，刚开始我是监听一个data里message数据的变化，每次有消息的时候，元素的scrollTop=元素的scrollHeight，但每次都是滚动条都定位在最底下的上一条消息上，因为每有一个消息，我就push到message的数组里面，然后页面自动渲染，也就是在最后一条消息渲染完成前就完成了滚动条的移动，所以导致每次都差一条消息的位置。解决办法就是监听dom的变化， 使用this.$nextTick()，dom变化后再进行滚动条的移动
+只能点击一次事件 v-click.once=&amp;ldquo;clickOnce&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://kangzhiqing.com/post/docker/</link>
+      <pubDate>Thu, 29 Nov 2018 16:25:34 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/docker/</guid>
+      <description>记录学习docker的过程
+特性 标准化 加速开发和构建流程，方便测试。容器可以在开发环境构建，轻松的提交到测试环境，并最终进入生产环境
+docker核心组件  docker客户端和服务器（C/S）：docker引擎 docker镜像 仓库Registry docker容器  安装 按照官网给的步骤一步一步来就好了 https://docs.docker.com/install/
+启动 $ systemctl start docker 运行一个容器 $ docker run -i -t centos /bin/bash -i 开启标准输入(STDIN) -t 分配伪tty终端 设置了这两个参数就创建了一个我们可以交互的容器
+附着到正在运行的容器 $ docker attach containerId/Name 删除容器 删除一个容器 $ docker rm containerId/Name 删除所有容器(-q是只显示容器id) $ docker rm `docker ps -a -q` 镜像 拉取镜像
+$ docker pull imageName:version 删除镜像
+$ docker rmi imageName:version/id 查看镜像详细信息
+$ docker inspect repositoryName/imageId 将镜像推送到Docker Hub 登录</description>
+    </item>
+    
+    <item>
+      <title>VScode配置C环境</title>
+      <link>https://kangzhiqing.com/post/vscode%E9%85%8D%E7%BD%AEc%E7%8E%AF%E5%A2%83/</link>
+      <pubDate>Tue, 27 Nov 2018 18:39:26 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/vscode%E9%85%8D%E7%BD%AEc%E7%8E%AF%E5%A2%83/</guid>
+      <description>需要写一些关于C的实验报告，老师给的VC++6.0感觉很难用(字体小而且难看)，于是乎就想用我经常用的vscode编辑器来写C，上网百度了一些教程，搞了半天都没怎么搞懂里面的配置，于是自己就捣鼓了一哈。
+ 在vscode下载C/C++(Microsoft)扩展 下载编译器tdm-gcc(windows),其他编译器具体请看对应的官网，我觉得这个比较容易装就装了这个。 安装成功会自动到将tdm-gcc的bin路径加入到windows的path变量中，如果没有则自己手动添加一下  基本上做完上面两步就可以了 直接在终端输入gcc file.c -o file.exe就编译好了。 还有一种简单的方法就是在VScode中安装一个扩展插件&amp;ndash;Code Runner,这是一个可以运行C，C++，java，JS，PHP，Python的一个插件,安装好了重新加载一下就会看到在VScode右边出现一个运行的按钮,不过默认是在输出下运行，不过输出是一个只读编辑器,所以如果有scanf需要输入的话就不能做了。这时候改下Code Runner的配置，使它运行在Terminal。 文件&amp;ndash;&amp;gt;首选项&amp;ndash;&amp;gt;设置&amp;ndash;&amp;gt;用户设置&amp;ndash;&amp;gt;扩展&amp;ndash;&amp;gt;Code Runner Configuation&amp;ndash;&amp;gt;勾选✔Run in Terminal 还有一个问题就是运行C的时候中文在Terminal中使会乱码的，这是因为cmd自身编码的问题, 解决办法是终端或者在CMD.exe中进入到当前文件目录下输入chcp(CHCP是一个计算机指令，能够显示或设置活动代码页编号), 默认应该是936简体中文，所以需要改为utf-8，utf-8代码页编号是65001，输入chcp 65001就好了</description>
+    </item>
+    
+    <item>
+      <title>Node</title>
+      <link>https://kangzhiqing.com/post/node/</link>
+      <pubDate>Tue, 27 Nov 2018 17:04:59 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/node/</guid>
+      <description>开此篇记录下学习node的过程和一些笔记
+Node.js的一些特性  基于Chrome的V8引擎 事件驱动、非堵塞、单线程 Node.js是一个非阻塞的系统，当调用一些需要阻塞的等待或者事件，node会采用回调函数替代闲置等待，即事件驱动。就像我们在学校经常吃饭点餐的情况，点完餐之后店家会给个小票，上面有这此点餐的号码，到时候菜做好了就会叫号，这个号码相当于回调号码，这样就提高了效率，继续为下一个客人服务。 串行IO和并行IO，类似于同步和异步，前者的运行顺序是固定的，后者任何一个IO操作返回时间都是不确定的，如果IO操作有关联的话就要使用串行IO。按顺序的串行请求，无序的并行的请求  模块加载  require导入 exports导出  核心模块 files // ---------files--------- // Node.js利用流的方式来处理文件 // 引入模块 var fs = require(&amp;#39;fs&amp;#39;); // 1.写文件，当前路径下没有就创建一个，如果存在就覆盖 fs.writeFile(&amp;#39;./test.txt&amp;#39;, &amp;#39;异步写入一些数据&amp;#39;, &amp;#39;utf8&amp;#39;, function(err){ if(err){ console.log(&amp;#39;写入失败&amp;#39;) throw err }else{ console.log(&amp;#39;写入成功&amp;#39;) } }) fs.writeFileSync(&amp;#39;./test.txt&amp;#39;,&amp;#39;同步写入一些数据&amp;#39;,&amp;#39;utf8&amp;#39;) // 2.读文件，如果不加编码类型，则data返回的就是一个buffer缓冲区，里面存有二进制数据 fs.readFile(&amp;#39;./test.txt&amp;#39;,&amp;#39;utf8&amp;#39;,function(err, data){ console.log(data) }) // 3.追加文件，如果没有则创建一个 fs.appendFileSync(&amp;#39;./log.txt&amp;#39;, &amp;#39;同步追加，写入时间：&amp;#39;+new Date().toLocaleString()+&amp;#39;\n&amp;#39;) fs.appendFile(&amp;#39;./log.txt&amp;#39;,&amp;#39;异步追加，写入时间：&amp;#39;+new Date().toLocaleString()+&amp;#39;\n&amp;#39;,function(err){ if(err){ console.log(&amp;#39;添加失败&amp;#39;) }else{ console.log(&amp;#39;添加成功&amp;#39;) } }) // 4.监听文件，文件只要修改了就会执行回调函数 fs.watchFile(&amp;#39;./log.txt&amp;#39;, function(cuur,prev) { console.log(prev); }) // 5.判断文件是否存在，存在返回true，不存在返回false var res = fs.</description>
+    </item>
+    
+    <item>
+      <title>Tween.js</title>
+      <link>https://kangzhiqing.com/post/tween.js/</link>
+      <pubDate>Sun, 18 Nov 2018 11:22:48 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/tween.js/</guid>
+      <description>tween.js - http://github.com/sole/tween.js JavaScript tweening engine for easy animations, incorporating optimised Robert Penner&amp;rsquo;s equations. JavaScript补间引擎，可轻松制作动画，并采用优化的Robert Penner方程。
+1.基本用法(Usage) // 开始位置 var InitPosition = {x:100,y:0}; // 目标位置 var targetPosition = {x:200,y:0}; // 创建一个开始位置的tween var tween = new TWEEN.Tween(Initposition); // 告诉tween需要变换到的位置和时间 tween.to({targetPositon},time); // 开始这个动画 tween.start(); // 为了使动画尽可能平滑,可以在每次循环的时候更新tween animate(); function animate() { requestAnimationFrame(animate); //...  TWEEN.update(); //... } // 整个变换过程中是不能看到位置的变换的,如果需要可以执行以下代码 tween.onUpdate(function() { console.log(this) }) </description>
+    </item>
+    
+    <item>
+      <title>Command</title>
+      <link>https://kangzhiqing.com/post/command/</link>
+      <pubDate>Sat, 17 Nov 2018 13:49:47 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/command/</guid>
+      <description>Linux基本操作 ls -ah	查看所有文件,包括隐藏文件 pwd	print working directory 打印当前路径 mv oldname.js newname.js 重命名 cat	查看当前文件 cp: cp &amp;lt;file&amp;gt; &amp;lt;path&amp;gt;	复制file到path路径 cp &amp;lt;file&amp;gt; &amp;lt;copy_name&amp;gt; 复制file并命名为copy_name,到当前路径 touch &amp;lt;file&amp;gt; 创建一个文件 rm -f &amp;lt;file&amp;gt; 删除一个文件 rm -rf &amp;lt;file package&amp;gt; 删除一个文件夹 uname print system information tty 显示当前终端 tar tar -x 解压 tar -v 显示解压过程 tar -f 要操作的文件名 ----------------------------------------------------------------- git基本操作 git是分布式版本控制系统 git 基本操作 git init 初始化仓库 git add	&amp;lt;file&amp;gt; 添加file到仓库暂存区 git commit	将暂存区的内容提交到master git status	获取当前的git状态,查看哪些文件操作过 git diff &amp;lt;file&amp;gt; 查看file更改的详细信息 git log	查看当前git的信息 git reset --hard HEAD^ 回退到HEAD之前的一个版本 git reflog 查看提交的不同版本commit号和具体信息 git checkout --&amp;lt;file&amp;gt; 还没有进行git add &amp;lt;file&amp;gt;的操作,回退该文件最近提交的一个版本 git reset HEAD &amp;lt;file&amp;gt; 进行了git add &amp;lt;file&amp;gt;的操作,先进行该步操作,然后再使用git checkout --&amp;lt;file&amp;gt; git rm	删除一个仓库的文件并且提交git commit ssh-keygen -t rsa -C &amp;#34;youremail@example.</description>
+    </item>
+    
+    <item>
+      <title>Q &amp;&amp; A</title>
+      <link>https://kangzhiqing.com/post/q-a/</link>
+      <pubDate>Fri, 16 Nov 2018 10:01:19 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/q-a/</guid>
+      <description>1. return !1 和 return false 以及 return 0! 和 return true写法有什么区别 tween.min.js的源码 update: function(c) { if (0 === a.length) return !1; for ( var b = 0, d = a.length, c = void 0 !== c ? c : Date.now(); b &amp;lt; d; ) a[b].update(c) ? b++ : (a.splice(b, 1), d--); return !0; } 2. void 和 undefined 有什么区别(详细请看这里) A : void是一种操作符,无论void后的表达式是什么，void操作符都会返回undefined.但undefined不是保留字,undefined可以作为变量使用,所以在使用undefined作为变量名的时候容易出错,因此使用void可以确保取到undefined值
+function x() { var undefined = &amp;#39;hello world&amp;#39;, f = {}, window = { &amp;#39;undefined&amp;#39;: &amp;#39;joke&amp;#39; }; console.</description>
+    </item>
+    
+    <item>
+      <title>Typeof</title>
+      <link>https://kangzhiqing.com/post/typeof/</link>
+      <pubDate>Thu, 01 Nov 2018 17:52:19 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/typeof/</guid>
+      <description>typeof返回一个字符串,表示为经计算的操作数的类型 typeof(操作数)/typeof 操作数 ()是可以省略的 返回有五种基本类型:string,number,boolean,undefined,function,object 还有ES6的Symbol
+// 1.string: typeof(&amp;#39;你好&amp;#39;) typeof(&amp;#39;123&amp;#39;) typeof(&amp;#39;&amp;#39;) // 空字符串也是String类型 typeof(typeof(&amp;#39;a&amp;#39;)) // 2.number: typeof(123); typeof(NaN); // 3.boolean: typeof(true); typeof(false); typeof(NaN===NaN) // 强制类型转换  // 4.undefined: typeof(a) // 未经使用的变量的数据类型  // 5.object: typeof(null) // js底层所有值的前三位表示数据类型,object是000,而null的32位全是0,因此也是object typeof([]) typeof({}) // 6.function: typeof(function(){}) typeof(new Function()) typeof(class A{}) typeof(Symbol) // 7.symbol: typeof(Symbol()) 暂时性死区 在ES6中let和const出现之前,typeof都是一个完全安全的操作,即不会报错,但有了ES6中let和const的出现所带来的暂时性死区特性,使得typeof也有可能报错
+如果在一个块级作用域下存在let或const命令,则它所声明的变量就绑定在这个区域,不再受外部的影响.在声明之前使用这些变量就会报错.使用let命令声明变量之前是不可用的,这在语法上称为暂时性死区
+typeof(a); //ReferenceError let a; </description>
+    </item>
+    
+    <item>
+      <title>CSS3 Canvas</title>
+      <link>https://kangzhiqing.com/post/css3-canvas/</link>
+      <pubDate>Wed, 31 Oct 2018 18:52:17 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/css3-canvas/</guid>
+      <description>Canvas 是 HTML5 新增加的一个元素,它又称为&amp;quot;画布&amp;quot;,主要有以下四种功能
+ 绘制图形 绘制图表 动画效果 游戏开发  在 chrome 浏览器中,canvas 的默认宽高是 300px 和 150px,写宽高的样式的时候最好写在 HTML 页面的属性值里面
+&amp;lt;canvas width=&amp;#34;150&amp;#34; height=&amp;#34;100&amp;#34; style=&amp;#34;border: 1px black dashed&amp;#34;&amp;gt;&amp;lt;/canvas&amp;gt; 一般的操作 1.获取 canvas 对象 2.获取上下文环境对象 context
+cxt = canvas.getContext(&amp;#34;2d&amp;#34;); 3.开始绘制图形
+1.直线 cxt.moveTo(x1,y1) 画笔移到(x1,y1)处 cxt.LineTo(x2,y2) 画笔从起点(x1,y1)开始画线,一直到终点(x2,y2)处 cxt.strokeStyle = &amp;#34;red&amp;#34; 设置线的颜色 cxt.stroke() 用笔划线 (tip:cxt.strokeStyle要在cxt.stroke()之前执行,否则是看不到效果的,和画画是一样的,在动笔之前把要画的东西,颜色,样式确定好 2.描边矩形 填充矩形 清空矩形  描边矩形  cxt.strokeRect(x1,y1,x2,y2) (x1,y1)为矩形左上角坐标,(x2,y2)为矩形右下角坐标 等价于==&amp;gt; cxt.rect(x1,y1,x2,y2); cxt.stroke();  填充矩形  cxt.fillStyle = &amp;#34;属性值&amp;#34; cxt.fillRect(x1,y1,width,height) (x1,y1)是矩形左上角坐标,width是矩形的宽度,height是矩形的高度 等价于==&amp;gt; cxt.rect(x1,y1,x2,y2); cxt.fill()  清空矩形  cxt.</description>
+    </item>
+    
+    <item>
+      <title>Hugo主题sam</title>
+      <link>https://kangzhiqing.com/post/hugo%E4%B8%BB%E9%A2%98sam/</link>
+      <pubDate>Tue, 30 Oct 2018 22:22:27 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/hugo%E4%B8%BB%E9%A2%98sam/</guid>
+      <description>sam
+├─archetypes├─exampleSite│ ├─content│ │ ├─gallery│ │ │ └─images│ │ │ └─small│ │ └─posts│ ├─resources│ └─static│ └─img├─images├─layouts│ ├─gallery│ ├─partials│ ├─posts│ └─_default├─sass└─static└─css</description>
+    </item>
+    
+    <item>
+      <title>MySQL</title>
+      <link>https://kangzhiqing.com/post/mysql/</link>
+      <pubDate>Tue, 30 Oct 2018 17:06:30 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/mysql/</guid>
+      <description>mysql数据库是我今年暑假在家学习的，当时学习的时候写了一些笔记，现在把笔记整理到博客上。
+Tips  sql语句的语法Windows下是不区分大小写的，但在Linux是严格区分的，最好还是用大写吧 单双引号表示字符没有区别 注释单行一般用 --，多行（块）用 /* */ 命名规范遵循基本的命名原则，具体因人而异，个人喜欢小驼峰  SQL语句分类  数据库查询语言DQL（datebase query language） SELECT 数据库定义语言DDL（datebase defined language）
+CREATE DATABASE、CREATE TABLE、DROP DATABASE、DROP TABLE 数据库操作语言DML（database manage language）
+UPDATE、INSERT、DELETE  数据类型属性 mysql常见的数据类型：varchar(n)、float、int(n)、bigint(n)、date、datetime、text
+ 默认值 default &#39;默认值&#39; 非空：NOT NULL  如果某一个字段别NOT NULL修饰后，添加数据时，此字段必需填写 自动增长：auto_increment，尽量作用在int类型的字段上 主键(唯一的，不能重复，一张表中只能以一个作为主键)：primary key 唯一健（唯一，可以有很多）：unique，被unique修饰的数据不能够重复  一个栗子
+USE kzq; DROP TABLE students; CREATE TABLE students( id BIGINT(20) AUTO_INCREMENT PRIMARY KEY COMMENT &amp;#39;学生编号&amp;#39;, stuName VARCHAR(40) COMMENT &amp;#39;学生姓名&amp;#39;, gender VARCHAR(2) DEFAULT &amp;#39;男&amp;#39; COMMENT &amp;#39;性别&amp;#39;, className VARCHAR(20) NOT NULL COMMENT &amp;#39;班级&amp;#39;, phone VARCHAR(20) UNIQUE COMMENT &amp;#39;手机号码&amp;#39; ) 库与表的创建和删除 -- 创建库 CREATE DATABASE 库名 CHARACTER SET 编码名 CREATE DATABASE kzq CHARACTER SET utf8 -- 选中某一个数据库 USE 库名 USE kzq -- 创建表 CREATE TABLE 表名( 字段1 数据类型 COMMENT .</description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://kangzhiqing.com/post/hugo/</link>
+      <pubDate>Tue, 30 Oct 2018 09:11:33 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/hugo/</guid>
+      <description>Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。我的博客网站就是通过Hugo来进行部署的,感谢Hugo,让我不需要重复造轮子. 官网:http://www.gohugo.org/ 1.下载 直接下载安装包 https://github.com/gohugoio/hugo/releases
+2.安装 windows10:解压安装包,会生成一个exe文件,在windows系统变量中添加当前路径到path.这样就算是安装成功了,之后都是在终端直接运行
+3.创建一个站点 hugo new site path/siteName 在path路径下生成一个叫siteName的站点站点目录结构:
+sitname├── archetypes│ └── default.md├── config.toml 配置文件├── content 存放主要内容的目录├── data ├── layouts├── static└── themes 主题目录4.创建一篇文章 hugo new posts/blog.md 在content目录下生成posts/blog.md 5.下载主题和配置 url : https://themes.gohugo.io/
+(1)下载
+这些主题都托管在GitHub上,可以直接用git的下载方式下载 cd themes/ 进入themes目录. git clone + 对应主题的地址在readme.md中,作者会有对应git命令操作. 直接在release最新发布版本中下载包 (2)配置 可以直接将下载的主题目录里面的 exampleSite/config.toml复制到站点根目录下覆盖初始化的config.toml文件 ( tip:注意config.toml文件中启用的主题名字是否和主题目录名一样,sam主题就是不一样的,不然就会加载主题失败 ) sam主题 ( https://themes.gohugo.io/hugo-theme-sam/ ) , 一个简约舒适的主题
+6.启动项目及部署 (1)启动本地服务▶ hugo server (--theme=&amp;lt;themeName&amp;gt;如果有多个主题可以进行选择)一般在本地的1313端口运行 localhost:1313 or 127.</description>
+    </item>
+    
+  </channel>
+</rss>
