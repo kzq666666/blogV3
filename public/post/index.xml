@@ -6,7 +6,27 @@
     <description>Recent content in Posts on KiWaTo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Nov 2020 16:57:45 +0800</lastBuildDate><atom:link href="https://kangzhiqing.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Nov 2020 15:45:22 +0800</lastBuildDate><atom:link href="https://kangzhiqing.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>概念</title>
+      <link>https://kangzhiqing.com/post/%E6%A6%82%E5%BF%B5/</link>
+      <pubDate>Sat, 28 Nov 2020 15:45:22 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/%E6%A6%82%E5%BF%B5/</guid>
+      <description>感受野(receptive field) 卷积输出层一个像素点对于原图的映射范围的大小（原图的像素大小）。越往后，提取的特征越多，感受野越大。类似望远镜的一个小点，可以看到很多风景，能够感受的范围就越大。</description>
+    </item>
+    
+    <item>
+      <title>DeepLearning</title>
+      <link>https://kangzhiqing.com/post/deeplearning/</link>
+      <pubDate>Fri, 13 Nov 2020 15:47:57 +0800</pubDate>
+      
+      <guid>https://kangzhiqing.com/post/deeplearning/</guid>
+      <description>How could I not study deep learning?
+Neural NetWord and Deep Learning 传送门 （1）
+ Structured Data: database of data like a table or column that has a lot information    Name Age Sex     Bob 27 male   Alice 23 female     Unstructured Data:things like audio or image or text,the features might be the pixel values in and image. It is more difficult for computer to deal with unstructured data than strutured data</description>
+    </item>
+    
     <item>
       <title>NewBlog</title>
       <link>https://kangzhiqing.com/post/newblog/</link>

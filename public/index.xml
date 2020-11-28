@@ -6,7 +6,134 @@
         <description>Recent content on KiWaTo</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 12 Nov 2020 16:57:45 +0800</lastBuildDate><atom:link href="https://kangzhiqing.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 28 Nov 2020 15:45:22 +0800</lastBuildDate><atom:link href="https://kangzhiqing.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>概念</title>
+        <link>https://kangzhiqing.com/post/%E6%A6%82%E5%BF%B5/</link>
+        <pubDate>Sat, 28 Nov 2020 15:45:22 +0800</pubDate>
+        
+        <guid>https://kangzhiqing.com/post/%E6%A6%82%E5%BF%B5/</guid>
+        <description>&lt;h3 id=&#34;感受野receptive-field&#34;&gt;感受野(receptive field)&lt;/h3&gt;
+&lt;p&gt;卷积输出层一个像素点对于原图的映射范围的大小（原图的像素大小）。越往后，提取的特征越多，感受野越大。类似望远镜的一个小点，可以看到很多风景，能够感受的范围就越大。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>DeepLearning</title>
+        <link>https://kangzhiqing.com/post/deeplearning/</link>
+        <pubDate>Fri, 13 Nov 2020 15:47:57 +0800</pubDate>
+        
+        <guid>https://kangzhiqing.com/post/deeplearning/</guid>
+        <description>&lt;p&gt;How could I not study deep learning?&lt;/p&gt;
+&lt;h2 id=&#34;neural-netword-and-deep-learning&#34;&gt;Neural NetWord and Deep Learning&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.ai-start.com/dl2017/html/lesson1-week1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;传送门&lt;/a&gt;
+&lt;br&gt;
+（1）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Structured Data: database of data like a table or column that has a lot information
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Age&lt;/th&gt;
+&lt;th&gt;Sex&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Bob&lt;/td&gt;
+&lt;td&gt;27&lt;/td&gt;
+&lt;td&gt;male&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Alice&lt;/td&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;td&gt;female&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;Unstructured Data:things like audio or image or text,the features might be the pixel values in and image. It is more difficult for computer to deal with unstructured data than strutured data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;（2）If you want to hit a high performance, you need train a big enough NN and a lot of data. &lt;code&gt;Scale has been driving deep learning progress.The scale means not only the nums of hidden layers of NN or nodes but only the scale of data&lt;/code&gt;. We change the algorithm because it allows the code to run much faster and this allows us to train bigger neural network or complete the computation within reasonable amount of time.&lt;/p&gt;
+&lt;h2 id=&#34;chapter-two&#34;&gt;Chapter Two&lt;/h2&gt;
+&lt;p&gt;Cost Function:measure how well you are doing an entire training set.We need a cost function to get the parameters w by training the cost function and parameters b. It is used to measure the performance of the algorithm on all training samples. 
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Loss Function:defined in a single training example, which is used to measure the performance of the algorithm in a single training sample&lt;/p&gt;
+&lt;h3 id=&#34;confront-high-bias&#34;&gt;Confront high Bias&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Bigger network like more hidden layers or more hidden nodes&lt;/li&gt;
+&lt;li&gt;Train it longer&lt;/li&gt;
+&lt;li&gt;train more advanced optimization algorithm&lt;/li&gt;
+&lt;li&gt;decrease regularization parameter lambda&lt;/li&gt;
+&lt;li&gt;add polynomial degress&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;confront-high-variance&#34;&gt;Confront high variance&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Regularization(L2 Regularization use lambda)&lt;/li&gt;
+&lt;li&gt;Use more data or data augmentation&lt;/li&gt;
+&lt;li&gt;Drop out&lt;/li&gt;
+&lt;li&gt;Early Stop&lt;/li&gt;
+&lt;li&gt;use simpler hypothesis&lt;/li&gt;
+&lt;li&gt;add regularization item&lt;/li&gt;
+&lt;li&gt;use validation set&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;normalizing-inputs&#34;&gt;Normalizing inputs&lt;/h3&gt;
+&lt;p&gt;(1) Process&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;zero mean&lt;/li&gt;
+&lt;li&gt;normalizion variance
+(2) Why do that&lt;/li&gt;
+&lt;li&gt;make the cost function faster to optimize&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;activation-fun&#34;&gt;Activation Fun&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;sigmod：output (0,1) Vanishing gradients&lt;/li&gt;
+&lt;li&gt;tanh: output (-1,1) zero mean, better to learn for the next layer, also have probleam of vanishing gradients compared with sigmod&lt;/li&gt;
+&lt;li&gt;relu: if x &amp;lt; 0, output 0. If x &amp;gt; 0, output x. Commonly use it.&lt;/li&gt;
+&lt;li&gt;leaky relu: if x &amp;lt; 0, output ax. If x &amp;gt; 0, output x.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;vectorization&#34;&gt;vectorization&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;speed up the computing
+tips: whenever possible, aviod explicit for loops&lt;/li&gt;
+&lt;li&gt;in the layer computation, we can&amp;rsquo;t aviod to use for-loops&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;others&#34;&gt;Others&lt;/h3&gt;
+&lt;p&gt;(1) The layers is counted by the nums of hidden layers + 1. The input layers is not counted.
+&lt;br&gt;
+(2) If the data is not very large, the proportion of train,validation(dev),test is 6:2:2.But if the data is very big ten thousand even bigger 100W, the proportion is 98:2:2
+&lt;br&gt;
+(3) The validation set and test set should be come from the same distribution.
+&lt;br&gt;
+(4) DropOut is used in the training time, randomly delete the units of hidden layer.
+&lt;br&gt;
+(5) Classification，CE + sigmod or CE + softmax&lt;/p&gt;
+&lt;h1 id=&#34;matlab-deep-learning&#34;&gt;MATLAB Deep Learning&lt;/h1&gt;
+&lt;h2 id=&#34;chapter-4-neural-network-and-classification&#34;&gt;Chapter 4 Neural NetWork And Classification&lt;/h2&gt;
+&lt;p&gt;(1) The sigmod activation function accounts for the weighted sum of inputs. But the softmax activation function accounts not only for the weighted sum of inputs,but also for the inputs to the other output nodes
+&lt;br&gt;&lt;/p&gt;
+&lt;h2 id=&#34;chapter-5-deep-learning&#34;&gt;Chapter 5 Deep Learning&lt;/h2&gt;
+&lt;h2 id=&#34;history&#34;&gt;History&lt;/h2&gt;
+&lt;p&gt;(1) It took 30 years to sovle the problems of the single-layer neural which lacks of the learning rule.The solution is the BP algorithm
+&lt;br&gt;
+(2) It took 20 years to solve the problems of the poor performance of the BP  -&amp;gt; the deep learing provided a solution.
+&lt;br&gt;
+(3) The problems of BP are as follows.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Vanishing gradient
+Solution: use the ReLU function as the activation function&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;overfitting&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;computational load&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>NewBlog</title>
         <link>https://kangzhiqing.com/post/newblog/</link>
         <pubDate>Thu, 12 Nov 2020 16:57:45 +0800</pubDate>
