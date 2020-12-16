@@ -94,3 +94,5 @@ Solution: use the ReLU function as the activation function
 
 - computational load
 
+## Chapter 6 Convolution Neural Network
+
