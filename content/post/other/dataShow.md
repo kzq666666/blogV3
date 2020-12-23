@@ -23,5 +23,13 @@ image:
 ### SwordArtOnLine 刀剑神域 1300
 ![刀剑神域](/img/dataShow/sword.png)
 
+### 原图训练集
+### Reside
+![reside](/img/dataShow/Reside.png)
+
+### OHAZE
+![OHAZE](/img/dataShow/OHAZE-1.png)
+
+
 
 
