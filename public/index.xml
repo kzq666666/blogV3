@@ -6,7 +6,20 @@
         <description>Recent content on KiWaTo</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 23 Dec 2020 13:41:48 +0800</lastBuildDate><atom:link href="https://kangzhiqing.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 25 Dec 2020 13:48:59 +0800</lastBuildDate><atom:link href="https://kangzhiqing.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>CartoonGan</title>
+        <link>https://kangzhiqing.com/post/cartoongan/</link>
+        <pubDate>Fri, 25 Dec 2020 13:48:59 +0800</pubDate>
+        
+        <guid>https://kangzhiqing.com/post/cartoongan/</guid>
+        <description>&lt;object data=&#34;/pdf/CartoonPDF.pdf&#34; type=&#34;application/pdf&#34; width=&#34;700px&#34; height=&#34;700px&#34;&gt;
+    &lt;embed src=&#34;http://yoursite.com/the.pdf&#34;&gt;
+        &lt;p&gt;This browser does not support PDFs. Please download the PDF to view it: &lt;a href=&#34;http://yoursite.com/the.pdf&#34;&gt;Download PDF&lt;/a&gt;.&lt;/p&gt;
+    &lt;/embed&gt;
+&lt;/object&gt;
+</description>
+        </item>
+        <item>
         <title>DataShow</title>
         <link>https://kangzhiqing.com/post/datashow/</link>
         <pubDate>Wed, 23 Dec 2020 13:41:48 +0800</pubDate>
@@ -73,107 +86,6 @@ Networks 基于卷积神经网络特征空间的纹理模型
 &lt;br&gt;
 风格和内容在卷积神经网络中的表达是可以分开的&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        </item>
-        <item>
-        <title>圣诞之行</title>
-        <link>https://kangzhiqing.com/post/%E5%9C%A3%E8%AF%9E%E4%B9%8B%E8%A1%8C/</link>
-        <pubDate>Tue, 15 Dec 2020 22:17:39 +0800</pubDate>
-        
-        <guid>https://kangzhiqing.com/post/%E5%9C%A3%E8%AF%9E%E4%B9%8B%E8%A1%8C/</guid>
-        <description>&lt;img src="https://kangzhiqing.com/img/204_2.jpg" alt="Featured image of post 圣诞之行" /&gt;&lt;h3 id=&#34;前言&#34;&gt;前言&lt;/h3&gt;
-&lt;p&gt;毕业一别，已过半年，是人是狗是敌是友，让我们12月25号晚上在广州揭晓吧~&lt;/p&gt;
-&lt;h3 id=&#34;2020年12月25日&#34;&gt;2020年12月25日&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;下午2点 - 下午6点：&lt;a class=&#34;link&#34; href=&#34;https://map.baidu.com/search/%E5%A4%A9%E7%8E%AFparc%20central/@12616040.61385098,2631776.562765,19z?querytype=s&amp;amp;da_src=shareurl&amp;amp;wd=%E5%A4%A9%E7%8E%AFparc%20central&amp;amp;c=257&amp;amp;src=0&amp;amp;pn=0&amp;amp;sug=0&amp;amp;l=19&amp;amp;b=%2812615560.61385098,2631542.312765;12616520.61385098,2632010.812765%29&amp;amp;from=webmap&amp;amp;biz_forward=%7B%22scaler%22:1,%22styles%22:%22pl%22%7D&amp;amp;device_ratio=1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;天环&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;PlanA&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;晚上网吧地址：&lt;a class=&#34;link&#34; href=&#34;https://map.baidu.com/poi/%E7%BD%91%E9%B1%BC%E7%BD%91%E5%92%96%28%E5%B9%BF%E5%B7%9E%E6%9E%97%E5%92%8C%E8%A5%BF%E5%BA%97%29/@12617918.506504612,2633314.5295772245,13.86z?uid=4e0d24fcaa0db4e395f08c10&amp;amp;ugc_type=3&amp;amp;ugc_ver=1&amp;amp;device_ratio=1&amp;amp;compat=1&amp;amp;querytype=detailConInfo&amp;amp;da_src=shareurl&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;网鱼网咖林和西店&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;酒店：附近的酒店挺多，&lt;a class=&#34;link&#34; href=&#34;https://map.baidu.com/poi/IU%E9%85%92%E5%BA%97%28%E6%9E%97%E5%92%8C%E8%A5%BF%E5%9C%B0%E9%93%81%E7%AB%99%E5%BA%97%29/@12615930.427439565,2632926.836355677,17.99z?uid=ee927ac0f90ad6d9c26c14f5&amp;amp;ugc_type=3&amp;amp;ugc_ver=1&amp;amp;device_ratio=1&amp;amp;compat=1&amp;amp;querytype=detailConInfo&amp;amp;da_src=shareurl&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;IU酒店&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;PlanB（X）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://map.baidu.com/search/%E9%9D%92%E5%B9%B4%E7%94%B5%E7%AB%9E%E5%85%AC%E5%AF%93%28%E5%A4%AA%E9%98%B3%E5%9F%8E%E5%90%8C%E5%92%8C%E5%BA%97%29/@12616391.115,2638508.02,19z?querytype=s&amp;amp;da_src=shareurl&amp;amp;wd=%E9%9D%92%E5%B9%B4%E7%94%B5%E7%AB%9E%E5%85%AC%E5%AF%93%28%E5%A4%AA%E9%98%B3%E5%9F%8E%E5%90%8C%E5%92%8C%E5%BA%97%29&amp;amp;c=257&amp;amp;src=0&amp;amp;wd2=%E5%B9%BF%E5%B7%9E%E5%B8%82%E7%99%BD%E4%BA%91%E5%8C%BA&amp;amp;pn=0&amp;amp;sug=1&amp;amp;l=13&amp;amp;b=%2812601060.346341824,2626553.0302787717;12639369.674992206,2645248.780771171%29&amp;amp;from=webmap&amp;amp;biz_forward=%7B%22scaler%22:1,%22styles%22:%22pl%22%7D&amp;amp;sug_forward=8710d134fec435ecdbd89154&amp;amp;device_ratio=1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;青年电竞公寓(太阳城同和店)&lt;/a&gt;
-订个五人间or三人间加个双人间（睡觉的话，让mq睡双人间，204一个房间）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;2020年12月26日&#34;&gt;2020年12月26日&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;上午：睡觉zzzzz 休息一下&lt;/li&gt;
-&lt;li&gt;中午：一起去附近吃个饭&lt;/li&gt;
-&lt;li&gt;下午：
-&lt;ul&gt;
-&lt;li&gt;卡丁车&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://map.baidu.com/poi/%E6%B2%99%E9%9D%A2%E5%B2%9B/@12607204.371655975,2628784.7816068777,18.42z?uid=5211d21947800e417dc8761e&amp;amp;ugc_type=3&amp;amp;ugc_ver=1&amp;amp;device_ratio=1&amp;amp;compat=1&amp;amp;querytype=detailConInfo&amp;amp;da_src=shareurl&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;沙面岛&lt;/a&gt;，附近也有一些文化公园还有一些博物馆&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://map.baidu.com/search/%E4%B8%8A%E4%B8%8B%E4%B9%9D%E7%BE%8E%E9%A3%9F%E5%B9%BF%E5%9C%BA%28%E5%AE%9D%E5%8D%8E%E8%B7%AF%E5%BA%97%29/@12606874.355,2629791.66,19z?querytype=s&amp;amp;da_src=shareurl&amp;amp;wd=%E4%B8%8A%E4%B8%8B%E4%B9%9D%E7%BE%8E%E9%A3%9F%E5%B9%BF%E5%9C%BA%28%E5%AE%9D%E5%8D%8E%E8%B7%AF%E5%BA%97%29&amp;amp;c=257&amp;amp;src=0&amp;amp;pn=0&amp;amp;sug=0&amp;amp;l=17&amp;amp;b=%2812605596.361063762,2627940.4165022327;12609145.56828223,2629672.503566663%29&amp;amp;from=webmap&amp;amp;biz_forward=%7B%22scaler%22:1,%22styles%22:%22pl%22%7D&amp;amp;device_ratio=1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;上下九美食广场(宝华路店)&lt;/a&gt; （X）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;晚上：&lt;a class=&#34;link&#34; href=&#34;https://map.baidu.com/poi/%E7%8F%A0%E6%B1%9F%E5%A4%9C%E6%B8%B8%28%E5%A4%A9%E5%AD%97%E7%A0%81%E5%A4%B4%E4%B8%8A%E8%88%B9%E7%82%B9%29/@12610139.667108374,2630149.6497728764,15.58z?uid=219b5af61f8dda89d618b755&amp;amp;ugc_type=3&amp;amp;ugc_ver=1&amp;amp;device_ratio=1&amp;amp;compat=1&amp;amp;querytype=detailConInfo&amp;amp;da_src=shareurl&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;珠江夜游(珠江夜游(天字码头上船点))&lt;/a&gt;，然后到广州塔下，可以看看塔，没必要登塔，但如果有人想得话也可以。&lt;/li&gt;
-&lt;li&gt;唱会儿歌？&lt;/li&gt;
-&lt;li&gt;酒店：附近订，我懒得看了 &lt;a class=&#34;link&#34; href=&#34;https://map.baidu.com/poi/%E5%A6%82%E5%AE%B6%E9%85%92%E5%BA%97%28%E8%B5%A4%E5%B2%97%E5%9C%B0%E9%93%81%E7%AB%99%E5%BA%97%29/@12615426.11,2629472.7,15z?uid=6a18f8e1f22175ccb04c49dc&amp;amp;ugc_type=3&amp;amp;ugc_ver=1&amp;amp;device_ratio=2&amp;amp;compat=1&amp;amp;querytype=detailConInfo&amp;amp;da_src=shareurl&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;如家酒店(赤岗地铁站店)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;2020年12月27日&#34;&gt;2020年12月27日&lt;/h4&gt;
-&lt;p&gt;PlanA（年轻人）:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;上午：&lt;a class=&#34;link&#34; href=&#34;https://map.baidu.com/poi/%E9%95%BF%E9%9A%86%E6%97%85%E6%B8%B8%E5%BA%A6%E5%81%87%E5%8C%BA/@12616180.132381737,2616024.1033677044,16.65z?uid=913a853bba1678e115a190a6&amp;amp;ugc_type=3&amp;amp;ugc_ver=1&amp;amp;device_ratio=1&amp;amp;compat=1&amp;amp;querytype=detailConInfo&amp;amp;da_src=shareurl&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;长隆&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;下午五点：&lt;a class=&#34;link&#34; href=&#34;https://map.baidu.com/search/%E5%B9%BF%E5%B7%9E%E5%AE%9D%E8%83%BD%E8%A7%82%E8%87%B4%E6%96%87%E5%8C%96%E4%B8%AD%E5%BF%83/@12633717.347873358,2637179.715,19z?querytype=s&amp;amp;da_src=shareurl&amp;amp;wd=%E5%B9%BF%E5%B7%9E%E5%AE%9D%E8%83%BD%E8%A7%82%E8%87%B4%E6%96%87%E5%8C%96%E4%B8%AD%E5%BF%83&amp;amp;c=257&amp;amp;src=0&amp;amp;wd2=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%BB%84%E5%9F%94%E5%8C%BA&amp;amp;pn=0&amp;amp;sug=1&amp;amp;l=14&amp;amp;b=%2812595552.199562985,2624399.1463392884;12625528.30936566,2639028.112425281%29&amp;amp;from=webmap&amp;amp;biz_forward=%7B%22scaler%22:1,%22styles%22:%22pl%22%7D&amp;amp;sug_forward=6b7c6280013cbef84f3a595d&amp;amp;device_ratio=1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;德玛西亚杯广州宝能观致文化中心&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;PlanB（老年人）：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;上午：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://map.baidu.com/poi/%E4%B8%AD%E5%B1%B1%E7%BA%AA%E5%BF%B5%E5%A0%82/@12609416.21757878,2631984.92859,19z?uid=323b7bfa27cd1ad816a19044&amp;amp;ugc_type=3&amp;amp;ugc_ver=1&amp;amp;device_ratio=1&amp;amp;compat=1&amp;amp;querytype=detailConInfo&amp;amp;da_src=shareurl&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;中山纪念堂&lt;/a&gt; or &lt;a class=&#34;link&#34; href=&#34;https://map.baidu.com/search/%E5%B9%BF%E5%B7%9E%E5%8D%9A%E7%89%A9%E9%A6%86/@12609513.65,2632497.07,19z?querytype=s&amp;amp;da_src=shareurl&amp;amp;wd=%E5%B9%BF%E5%B7%9E%E5%8D%9A%E7%89%A9%E9%A6%86&amp;amp;c=257&amp;amp;src=0&amp;amp;wd2=%E5%B9%BF%E5%B7%9E%E5%B8%82%E8%B6%8A%E7%A7%80%E5%8C%BA&amp;amp;pn=0&amp;amp;sug=1&amp;amp;l=17&amp;amp;b=%2812608702.712948624,2631539.5689431992;12611265.158276875,2632790.688381406%29&amp;amp;from=webmap&amp;amp;biz_forward=%7B%22scaler%22:2,%22styles%22:%22pl%22%7D&amp;amp;sug_forward=41572e004e7903b4b45f1e3c&amp;amp;device_ratio=1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;广州博物馆&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://map.baidu.com/poi/%E8%B6%8A%E7%A7%80%E5%85%AC%E5%9B%AD/@12609564.88064251,2633002.8810045877,17.29z?uid=8498b7da3441ea57e8e582e1&amp;amp;ugc_type=3&amp;amp;ugc_ver=1&amp;amp;device_ratio=1&amp;amp;compat=1&amp;amp;querytype=detailConInfo&amp;amp;da_src=shareurl&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;越秀公园&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;中午去&lt;a class=&#34;link&#34; href=&#34;https://map.baidu.com/dir/%E8%B6%8A%E7%A7%80%E5%85%AC%E5%9B%AD/%E5%8C%97%E4%BA%AC%E8%B7%AF%E6%AD%A5%E8%A1%8C%E8%A1%97/@12609502.646629747,2631397.1950000003,16.36z?querytype=bse&amp;amp;c=257&amp;amp;singleType=0&amp;amp;poiType=0&amp;amp;isSingle=true&amp;amp;ptx=12609080.738813&amp;amp;pty=2633005.010926&amp;amp;wd=%E5%8C%97%E4%BA%AC%E8%B7%AF%E6%AD%A5%E8%A1%8C%E8%A1%97&amp;amp;name=%E8%B6%8A%E7%A7%80%E5%85%AC%E5%9B%AD&amp;amp;wd2=%E5%B9%BF%E5%B7%9E%E5%B8%82%E8%B6%8A%E7%A7%80%E5%8C%BA&amp;amp;sn=0$$8498b7da3441ea57e8e582e1$$12609080.738813,2633005.010926$$%E8%B6%8A%E7%A7%80%E5%85%AC%E5%9B%AD$$$$$$&amp;amp;exptype=dep&amp;amp;exptime=2020-12-16%2016:20&amp;amp;version=5&amp;amp;da_src=shareurl&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;北京路步行街&lt;/a&gt;吃饭吧&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;下午（先写上，老年人们估计去不了这么多，到时候直接去看比赛就行）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://map.baidu.com/poi/%E9%BB%84%E5%9F%94%E5%86%9B%E6%A0%A1%E6%97%A7%E5%9D%80%E7%BA%AA%E5%BF%B5%E9%A6%86/@12627246.704507736,2626296.97812,19z?uid=fa01e937bed4e44a764ff182&amp;amp;ugc_type=3&amp;amp;ugc_ver=1&amp;amp;device_ratio=1&amp;amp;compat=1&amp;amp;querytype=detailConInfo&amp;amp;da_src=shareurl&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;黄埔军校旧址&lt;/a&gt; 
-&lt;a class=&#34;link&#34; href=&#34;https://map.baidu.com/poi/%E8%BE%9B%E4%BA%A5%E9%9D%A9%E5%91%BD%E7%BA%AA%E5%BF%B5%E9%A6%86/@12626752.933623346,2624614.046565,19z?uid=43cee93301a30b7abd4842d8&amp;amp;ugc_type=3&amp;amp;ugc_ver=1&amp;amp;device_ratio=1&amp;amp;compat=1&amp;amp;querytype=detailConInfo&amp;amp;da_src=shareurl&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;辛亥革命纪念馆&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;17点 &lt;a class=&#34;link&#34; href=&#34;https://map.baidu.com/search/%E5%B9%BF%E5%B7%9E%E5%AE%9D%E8%83%BD%E8%A7%82%E8%87%B4%E6%96%87%E5%8C%96%E4%B8%AD%E5%BF%83/@12633717.347873358,2637179.715,19z?querytype=s&amp;amp;da_src=shareurl&amp;amp;wd=%E5%B9%BF%E5%B7%9E%E5%AE%9D%E8%83%BD%E8%A7%82%E8%87%B4%E6%96%87%E5%8C%96%E4%B8%AD%E5%BF%83&amp;amp;c=257&amp;amp;src=0&amp;amp;wd2=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%BB%84%E5%9F%94%E5%8C%BA&amp;amp;pn=0&amp;amp;sug=1&amp;amp;l=14&amp;amp;b=%2812595552.199562985,2624399.1463392884;12625528.30936566,2639028.112425281%29&amp;amp;from=webmap&amp;amp;biz_forward=%7B%22scaler%22:1,%22styles%22:%22pl%22%7D&amp;amp;sug_forward=6b7c6280013cbef84f3a595d&amp;amp;device_ratio=1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;德玛西亚杯广州宝能观致文化中心&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;晚上：想干啥干啥。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;酒店就附近订 &lt;a class=&#34;link&#34; href=&#34;https://map.baidu.com/poi/%E5%A6%82%E5%AE%B6%E7%B2%BE%E9%80%89%E9%85%92%E5%BA%97%28%E9%A6%99%E9%9B%AA%E5%9C%B0%E9%93%81%E7%AB%99%E5%BA%97%29/@12632329.58,2634877.5900000003,12z?uid=9c2e46eaa4d808d6233bf297&amp;amp;ugc_type=3&amp;amp;ugc_ver=1&amp;amp;device_ratio=2&amp;amp;compat=1&amp;amp;querytype=detailConInfo&amp;amp;da_src=shareurl&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;如家精选酒店(香雪地铁站店)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;2020年12月28日&#34;&gt;2020年12月28日&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://map.baidu.com/poi/%E7%82%B9%E9%83%BD%E5%BE%B7%28%E6%B1%87%E8%83%9C%E6%A5%BC%E5%BA%97%29/@12618557.763870394,2631510.170000001,14.94z?uid=f3a302d1f7dcebdd44e2743a&amp;amp;ugc_type=3&amp;amp;ugc_ver=1&amp;amp;device_ratio=2&amp;amp;compat=1&amp;amp;querytype=detailConInfo&amp;amp;da_src=shareurl&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;点都德&lt;/a&gt;
-老年人们还是喝个早茶，然后溜溜球吧&lt;/li&gt;
-&lt;li&gt;机场：起飞，886&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;tips&#34;&gt;TIPS&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         </item>
